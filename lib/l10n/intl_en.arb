@@ -16,5 +16,16 @@
     "goes_here": "goes in here",
     "select_language": "Select a language",
     "arabic": "Arabic",
-    "english": "English"
+    "english": "English",
+    "welcome": "Welcome to",
+    "create_1": "Create a free Chatty Charm account",
+    "create_2": "and ignite your curiosity!",
+    "email": "Email address",
+    "password": "Password",
+    "create_free_account": "Create FREE account",
+    "already_have_an_account": "Already have an account?",
+    "log_in": "Log in",
+    "login_1": "Log in to your free Chatty Charm account",
+    "not_have_an_account": "Don't have an account?",
+    "register": "Register now"
 }

@@ -1,3 +1,4 @@
+import 'package:chatty_charm/core/utils/constants/api_key.dart';
 import 'package:chatty_charm/features/chat/data/models/message_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,11 +10,11 @@ class ChatCubit extends Cubit<ChatState> {
   ChatCubit() : super(ChatInitial());
 
   List<MessageModel> messages = [];
-  static const apiKey = "AIzaSyDlGupLyPa-Ui5NVFM1rEivMdFSfjylwYw";
+
   Future<void> sendMessage({required TextEditingController controller}) async {
     emit(ChatLoading());
     try {
-      final model = GenerativeModel(model: "gemini-pro", apiKey: apiKey);
+      final model = GenerativeModel(model: "gemini-pro", apiKey: ApiKey.apiKey);
       final message = controller.text;
       controller.clear();
       messages.add(

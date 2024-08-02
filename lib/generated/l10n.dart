@@ -229,6 +229,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome to`
+  String get welcome {
+    return Intl.message(
+      'Welcome to',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create a free Chatty Charm account`
+  String get create_1 {
+    return Intl.message(
+      'Create a free Chatty Charm account',
+      name: 'create_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `and ignite your curiosity!`
+  String get create_2 {
+    return Intl.message(
+      'and ignite your curiosity!',
+      name: 'create_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email address`
+  String get email {
+    return Intl.message(
+      'Email address',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create FREE account`
+  String get create_free_account {
+    return Intl.message(
+      'Create FREE account',
+      name: 'create_free_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get already_have_an_account {
+    return Intl.message(
+      'Already have an account?',
+      name: 'already_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in`
+  String get log_in {
+    return Intl.message(
+      'Log in',
+      name: 'log_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in to your free Chatty Charm account`
+  String get login_1 {
+    return Intl.message(
+      'Log in to your free Chatty Charm account',
+      name: 'login_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get not_have_an_account {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'not_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register now`
+  String get register {
+    return Intl.message(
+      'Register now',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

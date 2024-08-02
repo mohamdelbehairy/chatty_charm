@@ -1,3 +1,4 @@
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/models/text_field_model.dart';
@@ -12,12 +13,13 @@ class AuthTextFieldsSection extends StatelessWidget {
       children: [
         CustomTextField(
             textFieldModel: TextFieldModel(
-                hintText: 'Email address',
+                hintText: S.of(context).email,
                 controller: TextEditingController())),
         const SizedBox(height: 16),
         CustomTextField(
             textFieldModel: TextFieldModel(
-                hintText: 'Password', controller: TextEditingController()))
+                hintText: S.of(context).password,
+                controller: TextEditingController()))
       ],
     );
   }

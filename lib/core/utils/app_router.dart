@@ -1,3 +1,4 @@
+import 'package:chatty_charm/features/auth/presentation/views/login_view.dart';
 import 'package:chatty_charm/features/auth/presentation/views/register_view.dart';
 import 'package:chatty_charm/features/chat/presentation/views/chat_view.dart';
 import 'package:chatty_charm/features/profile/presentation/views/profile_view.dart';
@@ -8,6 +9,7 @@ class AppRouter {
   static const registerView = "/registerView";
   static const chatView = "/chatView";
   static const profileView = "/profileView";
+  static const loginView = "/loginView";
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
@@ -17,6 +19,8 @@ class AppRouter {
       GoRoute(path: chatView, builder: (context, state) => const ChatView()),
       GoRoute(
           path: profileView, builder: (context, state) => const ProfileView()),
+      GoRoute(
+          path: loginView, builder: (context, state) => const LoginView()),
     ],
   );
 }
