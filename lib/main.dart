@@ -1,7 +1,11 @@
-import 'package:chatty_charm/features/splash/presentation/views/splash_view.dart';
+import 'package:chatty_charm/core/helper/bloc_observer.dart';
+import 'package:chatty_charm/core/utils/app_router.dart';
+import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  Bloc.observer = SimpleBlocObserver();
   runApp(const ChattyCharm());
 }
 
@@ -10,9 +14,13 @@ class ChattyCharm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      theme: ThemeData(
+          appBarTheme:
+              const AppBarTheme(backgroundColor: AppColors.backgroundColor),
+          scaffoldBackgroundColor: AppColors.backgroundColor),
     );
   }
 }

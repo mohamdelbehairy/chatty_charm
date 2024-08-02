@@ -1,4 +1,3 @@
-import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:chatty_charm/features/splash/presentation/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,10 +7,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: AppColors.backgroundColor,
       body: SplashViewBody(),
     );
   }
 }
-
-
