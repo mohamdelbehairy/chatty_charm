@@ -65,7 +65,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigate() {
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 5), () {
       GoRouter.of(context).go(AppRouter.chatView);
     });
   }

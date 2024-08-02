@@ -19,10 +19,10 @@ class Styles {
       fontWeight: FontWeight.w400,
       fontFamily: 'Rubik');
 
-  static const TextStyle medium28 = TextStyle(
+  static const TextStyle semiBold28 = TextStyle(
       fontSize: 28,
       color: Color(0xff262522),
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontFamily: 'Rubik');
 
   static const TextStyle regular15 = TextStyle(

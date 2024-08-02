@@ -15,25 +15,21 @@ class CopyItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var copyText = context.read<CopyTextCubit>();
-    return BlocListener<CopyTextCubit, CopyTextState>(
-      listener: (context, state) {
-        if (state is CopyTextSuccess) {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-            content: Text('Copied to clipboard'),
-            backgroundColor: AppColors.primaryColor,
-          ));
-        }
+    return InkWell(
+      onTap: () {
+        copyText.copyText(text);
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('Copied to clipboard'),
+          backgroundColor: AppColors.primaryColor,
+        ));
       },
-      child: InkWell(
-        onTap: () => copyText.copyText(text),
-        child: Row(
-          children: [
-            CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesCopy)),
-            const SizedBox(width: 4),
-            Text('Copy',
-                style: Styles.regular17.copyWith(color: AppColors.primaryColor))
-          ],
-        ),
+      child: Row(
+        children: [
+          CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesCopy)),
+          const SizedBox(width: 4),
+          Text('Copy',
+              style: Styles.regular17.copyWith(color: AppColors.primaryColor))
+        ],
       ),
     );
   }
