@@ -1,13 +1,9 @@
 class Assets {
   Assets._();
   
-  /// Assets for imagesPngLogo
-  /// assets/images/png_logo.png
-  static const String imagesPngLogo = "assets/images/png_logo.png";
-
-  /// Assets for imagesSvgLogo
-  /// assets/images/svg_logo.svg
-  static const String imagesSvgLogo = "assets/images/svg_logo.svg";
+  /// Assets for imagesLogo
+  /// assets/images/logo.svg
+  static const String imagesLogo = "assets/images/logo.svg";
 
   /// Assets for imagesWelcome
   /// assets/images/welcome.svg
