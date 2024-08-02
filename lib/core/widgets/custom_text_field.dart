@@ -14,6 +14,7 @@ class CustomTextField extends StatelessWidget {
         controller: textFieldModel.controller,
         validator: textFieldModel.validator,
         decoration: InputDecoration(
+            contentPadding: const EdgeInsets.all(16),
             border: borderMethod(),
             focusedBorder: borderMethod(),
             enabledBorder: borderMethod(),

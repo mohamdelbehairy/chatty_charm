@@ -1,3 +1,4 @@
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 import 'sliding_text_item.dart';
@@ -14,11 +15,12 @@ class SlidingText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SlidingTextItem(slidingAnimation: slidingAnimationOne, text: 'Chatty '),
-        SlidingTextItem(slidingAnimation: slidingAnimationTwo, text: 'Charm'),
+        SlidingTextItem(
+            slidingAnimation: slidingAnimationOne,
+            text: '${S.of(context).Chatty} '),
+        SlidingTextItem(
+            slidingAnimation: slidingAnimationTwo, text: S.of(context).Charm),
       ],
     );
   }
 }
-
-

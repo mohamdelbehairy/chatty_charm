@@ -1,9 +1,11 @@
+import 'package:chatty_charm/core/manager/is_arabic/is_arabic_cubit.dart';
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
 import 'package:chatty_charm/features/splash/presentation/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -54,13 +56,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 3));
-    slidingAnimationOne =
-        Tween<Offset>(begin: const Offset(-5, 0), end: Offset.zero)
-            .animate(animationController);
+    slidingAnimationOne = Tween<Offset>(
+            begin: Offset(context.read<IsArabicCubit>().isArabic() ? 5 : -5, 0),
+            end: Offset.zero)
+        .animate(animationController);
 
-    slidingAnimationTwo =
-        Tween<Offset>(begin: const Offset(5, 0), end: Offset.zero)
-            .animate(animationController);
+    slidingAnimationTwo = Tween<Offset>(
+            begin: Offset(context.read<IsArabicCubit>().isArabic() ? -5 : 5, 0),
+            end: Offset.zero)
+        .animate(animationController);
     animationController.forward();
   }
 

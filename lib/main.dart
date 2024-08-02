@@ -1,8 +1,13 @@
 import 'package:chatty_charm/core/helper/bloc_observer.dart';
+import 'package:chatty_charm/core/manager/select_language/select_language_cubit.dart';
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'core/manager/is_arabic/is_arabic_cubit.dart';
+import 'generated/l10n.dart';
 
 void main() {
   Bloc.observer = SimpleBlocObserver();
@@ -14,13 +19,31 @@ class ChattyCharm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          appBarTheme:
-              const AppBarTheme(backgroundColor: AppColors.backgroundColor),
-          scaffoldBackgroundColor: AppColors.backgroundColor),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => IsArabicCubit()),
+        BlocProvider(create: (context) => SelectLanguageCubit()),
+      ],
+      child: BlocBuilder<SelectLanguageCubit, SelectLanguageState>(
+        builder: (context, state) {
+          return MaterialApp.router(
+            locale: Locale(context.read<SelectLanguageCubit>().initLang),
+            routerConfig: AppRouter.router,
+            debugShowCheckedModeBanner: false,
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            theme: ThemeData(
+                appBarTheme: const AppBarTheme(
+                    backgroundColor: AppColors.backgroundColor),
+                scaffoldBackgroundColor: AppColors.backgroundColor),
+          );
+        },
+      ),
     );
   }
 }

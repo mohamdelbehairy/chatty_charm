@@ -14,7 +14,8 @@ class ProfileSettingItem extends StatelessWidget {
         ProfileListTile(
             profileListTileModel: ProfileListTileModel(
                 title: profileListTileModel.title,
-                image: profileListTileModel.image)),
+                image: profileListTileModel.image,
+                index: profileListTileModel.index)),
         const Divider(color: Color(0xffE9E4D1), thickness: 1.5)
       ],
     );

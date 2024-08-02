@@ -1,7 +1,10 @@
+import 'package:chatty_charm/core/manager/is_arabic/is_arabic_cubit.dart';
 import 'package:chatty_charm/core/models/text_field_model.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/widgets/custom_text_field.dart';
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ChatViewTextField extends StatelessWidget {
@@ -15,12 +18,18 @@ class ChatViewTextField extends StatelessWidget {
     return CustomTextField(
       textFieldModel: TextFieldModel(
         controller: controller,
-        hintText: 'Ask me anything...',
+        hintText: S.of(context).ask_me,
         suffixIcon: Padding(
-          padding: const EdgeInsets.only(right: 8.0),
+          padding: EdgeInsets.only(
+              left: context.read<IsArabicCubit>().isArabic() ? 8.0 : 0.0,
+              right: context.read<IsArabicCubit>().isArabic() ? 0.0 : 8.0),
           child: IconButton(
               onPressed: onPressed,
-              icon: SvgPicture.asset(Assets.imagesSendMessage)),
+              icon: Transform.rotate(
+                  angle: context.read<IsArabicCubit>().isArabic()
+                      ? 180 * 3.14 / 180
+                      : 360 * 3.14 / 180,
+                  child: SvgPicture.asset(Assets.imagesSendMessage))),
         ),
       ),
     );

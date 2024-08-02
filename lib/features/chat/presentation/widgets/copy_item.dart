@@ -1,8 +1,10 @@
+import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,10 +20,7 @@ class CopyItem extends StatelessWidget {
     return InkWell(
       onTap: () {
         copyText.copyText(text);
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Copied to clipboard'),
-          backgroundColor: AppColors.primaryColor,
-        ));
+        customSnackBar(context, S.of(context).copied_to_clipboard);
       },
       child: Row(
         children: [

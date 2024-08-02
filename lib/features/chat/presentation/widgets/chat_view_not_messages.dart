@@ -2,6 +2,7 @@ import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ChatViewNotMessages extends StatelessWidget {
@@ -16,15 +17,14 @@ class ChatViewNotMessages extends StatelessWidget {
           const SizedBox(height: 50),
           CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesLogo)),
           const SizedBox(height: 12),
-          const Text('Chatty Charm', style: Styles.regular34),
+          Text('${S.of(context).Chatty} ${S.of(context).Charm}',
+              style: Styles.regular34),
           const SizedBox(height: 16),
-          const Text(
-              "I'm here to help you with whatever you need, from answering questions to providing recommendations. Let's chat!",
-              textAlign: TextAlign.center,
-              style: Styles.regular17),
+          Text(S.of(context).helper,
+              textAlign: TextAlign.center, style: Styles.regular17),
           const SizedBox(height: 24),
           Text(
-            'Example: Some text example\n goes in here',
+            '${S.of(context).expamle}\n ${S.of(context).goes_here}',
             textAlign: TextAlign.center,
             style: Styles.regular17.copyWith(
                 fontStyle: FontStyle.italic, fontWeight: FontWeight.w600),
