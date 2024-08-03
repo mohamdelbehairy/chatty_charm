@@ -23,6 +23,7 @@ class RegisterViewButtonsSection extends StatelessWidget {
     return AuthButtonsSection(
         authButtonsModel: AuthButtonsModel(
             isLoading: isLoading,
+            
             buttonName: S.of(context).create_free_account,
             buttonText: S.of(context).log_in,
             text: S.of(context).already_have_an_account,

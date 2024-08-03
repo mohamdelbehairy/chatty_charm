@@ -44,12 +44,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("and ignite your curiosity!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("Create FREE account"),
+        "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "delete_account":
             MessageLookupByLibrary.simpleMessage("Delete account"),
+        "delete_account_":
+            MessageLookupByLibrary.simpleMessage("Delete Account?"),
+        "delete_message": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!"),
         "developer_name":
             MessageLookupByLibrary.simpleMessage("Mohamed El-Behairy"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email address"),
+        "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+            "this email is already in use"),
         "email_empty":
             MessageLookupByLibrary.simpleMessage("email address is required"),
         "email_valid":
@@ -67,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "goes_here": MessageLookupByLibrary.simpleMessage("goes in here"),
         "helper": MessageLookupByLibrary.simpleMessage(
             "I\'m here to help you with whatever you need, from answering questions to providing recommendations. Let\'s chat."),
+        "invalid_login": MessageLookupByLibrary.simpleMessage(
+            "Opps, There was a problem logging in. Check your email and password or create an account."),
         "language": MessageLookupByLibrary.simpleMessage("Languages"),
         "last_name": MessageLookupByLibrary.simpleMessage("last name"),
         "last_name_empty":
@@ -75,11 +84,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "log_out": MessageLookupByLibrary.simpleMessage("Log out"),
         "login_1": MessageLookupByLibrary.simpleMessage(
             "Log in to your free Chatty Charm account"),
+        "logout_message": MessageLookupByLibrary.simpleMessage(
+            "You have to login again with your username and password if you confirm to logout."),
+        "logout_title": MessageLookupByLibrary.simpleMessage(
+            "Are you sure that you want to logout?"),
         "made_with":
             MessageLookupByLibrary.simpleMessage("made with ❤️ in 🇪🇬"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "must_be_less_10_characters": MessageLookupByLibrary.simpleMessage(
             "must be less than 10 characters"),
+        "no": MessageLookupByLibrary.simpleMessage("no"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),

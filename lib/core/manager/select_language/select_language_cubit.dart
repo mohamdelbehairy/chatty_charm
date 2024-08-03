@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,9 +22,7 @@ class SelectLanguageCubit extends Cubit<SelectLanguageState> {
 
   void getLanguage() async {
     final prefs = await SharedPreferences.getInstance();
-    log('lang befor: $initLang');
     initLang = prefs.getString("lang") ?? "en";
-    log('lang after: $initLang');
     emit(SelectLanguageSuccess());
   }
 }

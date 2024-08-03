@@ -1,3 +1,4 @@
+import 'package:chatty_charm/core/models/button_model.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/features/auth/data/models/auth_buttons_model.dart';
 import 'package:flutter/material.dart';
@@ -13,9 +14,10 @@ class AuthButtonsSection extends StatelessWidget {
     return Column(
       children: [
         CustomButton(
-            isLoading: authButtonsModel.isLoading,
-            text: authButtonsModel.buttonName,
-            onPressed: authButtonsModel.buttonTap),
+            buttonModel: ButtonModel(
+                isLoading: authButtonsModel.isLoading,
+                buttonName: authButtonsModel.buttonName,
+                onPressed: authButtonsModel.buttonTap)),
         const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

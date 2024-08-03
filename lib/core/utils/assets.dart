@@ -53,10 +53,6 @@ class Assets {
   /// assets/images/profile.png
   static const String imagesProfile = "assets/images/profile.png";
 
-  /// Assets for imagesRemoveUser
-  /// assets/images/remove-user.svg
-  static const String imagesRemoveUser = "assets/images/remove-user.svg";
-
   /// Assets for imagesSendMessage
   /// assets/images/send_message.svg
   static const String imagesSendMessage = "assets/images/send_message.svg";

@@ -38,8 +38,8 @@ class Styles {
       fontWeight: FontWeight.w400,
       fontFamily: 'Rubik');
 
-  static TextStyle medium20 = TextStyle(
-      fontSize: getResponsiveFontSize(20),
+  static TextStyle medium22 = TextStyle(
+      fontSize: getResponsiveFontSize(22),
       color: const Color(0xffFFFBF2),
       fontWeight: FontWeight.w500,
       fontFamily: 'Rubik');

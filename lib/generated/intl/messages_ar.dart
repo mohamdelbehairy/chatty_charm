@@ -43,11 +43,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_2": MessageLookupByLibrary.simpleMessage("واشعل فضولك!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("أنشئ حسابًا مجانيًا"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "delete_account": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
+        "delete_account_": MessageLookupByLibrary.simpleMessage("حذف الحساب؟"),
+        "delete_message": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد من أنك تريد حذف حسابك؟ سيتم حذف جميع البيانات التي لديك. هذا الخطوة لا يمكن التراجع عنها."),
         "developer_name": MessageLookupByLibrary.simpleMessage("محمد البحيري"),
         "edit_profile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_already_in_use": MessageLookupByLibrary.simpleMessage(
+            "هذا البريد الإلكتروني مستخدم بالفعل"),
         "email_empty":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
         "email_valid":
@@ -63,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "goes_here": MessageLookupByLibrary.simpleMessage("تدخل هنا"),
         "helper": MessageLookupByLibrary.simpleMessage(
             "أنا هنا لمساعدتك في أي شيء تحتاجه، من الإجابة عن الأسئلة وحتى تقديم التوصيات. دعنا نتحدث!"),
+        "invalid_login": MessageLookupByLibrary.simpleMessage(
+            "عذرًا، حدثت مشكلة في تسجيل الدخول. تحقق من بريدك الإلكتروني وكلمة المرور أو قم بإنشاء حساب."),
         "language": MessageLookupByLibrary.simpleMessage("اللغات"),
         "last_name": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "last_name_empty":
@@ -71,10 +79,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "log_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "login_1": MessageLookupByLibrary.simpleMessage(
             "سجّل دخولك إلى حساب شاتي تشارم"),
+        "logout_message": MessageLookupByLibrary.simpleMessage(
+            "يجب عليك تسجيل الدخول مرة أخرى باستخدام بريدك الإلكتروني وكلمة المرور عند تسجيل الخروج."),
+        "logout_title": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد من أنك تريد تسجيل الخروج؟"),
         "made_with": MessageLookupByLibrary.simpleMessage("صنع ب ❤️ في 🇪🇬"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "must_be_less_10_characters":
             MessageLookupByLibrary.simpleMessage("يجب ان يكون اقل من 10 حروف"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),

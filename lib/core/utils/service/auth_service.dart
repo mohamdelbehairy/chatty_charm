@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
   Future<UserCredential> register(
@@ -15,7 +16,11 @@ class AuthService {
     return userCredential;
   }
 
-  Future<void> logout() async {
-    await FirebaseAuth.instance.signOut();
+  Future<void> signout() async {
+    await Future.delayed(const Duration(seconds: 2));
+    await SharedPreferences.getInstance().then((value) async {
+      await value.remove('userID');
+      await FirebaseAuth.instance.signOut();
+    });
   }
 }

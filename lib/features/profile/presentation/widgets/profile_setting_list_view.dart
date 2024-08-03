@@ -1,10 +1,9 @@
 import 'package:chatty_charm/core/utils/assets.dart';
-import 'package:chatty_charm/core/widgets/custom_bottom_sheet.dart';
 import 'package:chatty_charm/features/profile/data/models/profile_list_tile_model.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-import 'language_bottom_sheet.dart';
+import 'on_tap.dart';
 import 'profile_setting_item.dart';
 
 class ProfileSettingListView extends StatelessWidget {
@@ -25,7 +24,7 @@ class ProfileSettingListView extends StatelessWidget {
           index: 2, title: S.of(context).chat, image: Assets.imagesDocs),
       ProfileListTileModel(
           index: 3,
-          title:  S.of(context).delete_account,
+          title: S.of(context).delete_account,
           image: Assets.imagesDelete,
           height: 25),
       ProfileListTileModel(
@@ -36,15 +35,7 @@ class ProfileSettingListView extends StatelessWidget {
         return InkWell(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
-          onTap: () {
-            if (index == 0) {
-            } else if (index == 1) {
-              customBottomSheet(
-                  context: context, child: const LanguageBottomSheet());
-            } else if (index == 2) {
-            } else if (index == 3) {
-            } else {}
-          },
+          onTap: () => onTap(context, index),
           child: ProfileSettingItem(
               profileListTileModel: ProfileListTileModel(
                   index: items[index].index,

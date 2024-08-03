@@ -46,5 +46,13 @@
     "last_name_empty": "last name is required",
     "username_empty": "username is required",
     "gender_empty": "gender is required",
-    "must_be_less_10_characters": "must be less than 10 characters"
+    "must_be_less_10_characters": "must be less than 10 characters",
+    "email_already_in_use": "this email is already in use",
+    "invalid_login": "Opps, There was a problem logging in. Check your email and password or create an account.",
+    "logout_title": "Are you sure that you want to logout?",
+    "logout_message": "You have to login again with your username and password if you confirm to logout.",
+    "no": "no",
+    "delete_account_": "Delete Account?",
+    "delete_message": "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!",
+    "delete": "Delete"
 }

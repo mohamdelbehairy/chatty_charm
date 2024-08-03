@@ -529,6 +529,86 @@ class S {
       args: [],
     );
   }
+
+  /// `this email is already in use`
+  String get email_already_in_use {
+    return Intl.message(
+      'this email is already in use',
+      name: 'email_already_in_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Opps, There was a problem logging in. Check your email and password or create an account.`
+  String get invalid_login {
+    return Intl.message(
+      'Opps, There was a problem logging in. Check your email and password or create an account.',
+      name: 'invalid_login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure that you want to logout?`
+  String get logout_title {
+    return Intl.message(
+      'Are you sure that you want to logout?',
+      name: 'logout_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have to login again with your username and password if you confirm to logout.`
+  String get logout_message {
+    return Intl.message(
+      'You have to login again with your username and password if you confirm to logout.',
+      name: 'logout_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `no`
+  String get no {
+    return Intl.message(
+      'no',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Account?`
+  String get delete_account_ {
+    return Intl.message(
+      'Delete Account?',
+      name: 'delete_account_',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!`
+  String get delete_message {
+    return Intl.message(
+      'Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!',
+      name: 'delete_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

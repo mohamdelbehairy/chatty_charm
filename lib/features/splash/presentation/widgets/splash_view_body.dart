@@ -7,6 +7,7 @@ import 'package:chatty_charm/features/splash/presentation/widgets/sliding_text.d
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -68,9 +69,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationController.forward();
   }
 
-  void navigate() {
-    Future.delayed(const Duration(seconds: 5), () {
-      GoRouter.of(context).go(AppRouter.loginView);
+  void navigate() async {
+    final prefs = await SharedPreferences.getInstance();
+    final userID = prefs.getString('userID');
+    Future.delayed(const Duration(seconds: 5), () async {
+      if (userID != null) {
+        GoRouter.of(context).go(AppRouter.homeView);
+      } else {
+        GoRouter.of(context).go(AppRouter.loginView);
+      }
     });
   }
 }

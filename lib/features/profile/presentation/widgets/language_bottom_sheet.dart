@@ -1,4 +1,5 @@
 import 'package:chatty_charm/core/manager/select_language/select_language_cubit.dart';
+import 'package:chatty_charm/core/models/button_model.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/core/widgets/custom_button.dart';
 import 'package:chatty_charm/generated/l10n.dart';
@@ -17,18 +18,25 @@ class LanguageBottomSheet extends StatelessWidget {
         Text(S.of(context).select_language, style: Styles.semiBold20),
         const SizedBox(height: 16),
         CustomButton(
-            text: S.of(context).arabic,
-            onPressed: () {
-              Navigator.pop(context);
-              selectLang.selectLanguage(lang: 'ar');
-            }),
+          buttonModel: ButtonModel(
+              borderRadius: 26,
+              style: Styles.medium22,
+              buttonName: S.of(context).arabic,
+              onPressed: () {
+                Navigator.pop(context);
+                selectLang.selectLanguage(lang: 'ar');
+              }),
+        ),
         const SizedBox(height: 8),
         CustomButton(
-            text: S.of(context).english,
-            onPressed: () {
-              Navigator.pop(context);
-              selectLang.selectLanguage(lang: 'eng');
-            }),
+            buttonModel: ButtonModel(
+                borderRadius: 26,
+                style: Styles.medium22,
+                buttonName: S.of(context).english,
+                onPressed: () {
+                  Navigator.pop(context);
+                  selectLang.selectLanguage(lang: 'eng');
+                })),
       ],
     );
   }

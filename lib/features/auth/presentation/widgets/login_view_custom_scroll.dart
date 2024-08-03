@@ -1,24 +1,23 @@
 import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
-import 'package:chatty_charm/core/utils/app_router.dart';
-import 'package:chatty_charm/features/auth/data/manager/register/register_cubit.dart';
+import 'package:chatty_charm/features/auth/data/manager/login/login_cubit.dart';
+import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../generated/l10n.dart';
+import '../../../../core/utils/app_router.dart';
 import 'auth_fields_section.dart';
-import 'register_view_buttons_section.dart';
+import 'login_view_buttons_section.dart';
 import 'welcome_auth_section.dart';
 
-class RegisterViewCustomScroll extends StatefulWidget {
-  const RegisterViewCustomScroll({super.key});
+class LoginViewCustomScroll extends StatefulWidget {
+  const LoginViewCustomScroll({super.key});
 
   @override
-  State<RegisterViewCustomScroll> createState() =>
-      _RegisterViewCustomScrollState();
+  State<LoginViewCustomScroll> createState() => _LoginViewCustomScrollState();
 }
 
-class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
+class _LoginViewCustomScrollState extends State<LoginViewCustomScroll> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
@@ -32,16 +31,16 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<RegisterCubit, RegisterState>(
+    return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
-        if (state is RegisterSuccess) {
-          GoRouter.of(context).go(AppRouter.addUserDataView);
+        if (state is LoginSuccess) {
+          GoRouter.of(context).go(AppRouter.homeView);
           email.clear();
           password.clear();
         }
-        if (state is RegisterFailure &&
-            state.errorMessage == 'email-already-in-use') {
-          customSnackBar(context, S.of(context).email_already_in_use);
+        if (state is LoginFailure &&
+            state.erroMessage == 'invalid-credential') {
+          customSnackBar(context, S.of(context).invalid_login);
         }
       },
       builder: (context, state) {
@@ -52,17 +51,17 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
             children: [
               const Spacer(flex: 2),
               WelcomeAuthSection(
-                  text: '${S.of(context).create_1}\n${S.of(context).create_2}'),
+                  text: '${S.of(context).login_1}\n ${S.of(context).create_2}'),
               AuthTextFieldsSection(
                   email: email,
                   password: password,
-                  enabled: state is RegisterLoading ? false : true),
+                  enabled: state is LoginLoading ? false : true),
               const Expanded(child: SizedBox(height: 24)),
-              RegisterViewButtonsSection(
-                  isLoading: state is RegisterLoading ? true : false,
+              LoginViewButtonsSection(
                   email: email,
                   password: password,
-                  formKey: formKey),
+                  formKey: formKey,
+                  isLoading: state is LoginLoading ? true : false),
               const Spacer(),
             ],
           ),

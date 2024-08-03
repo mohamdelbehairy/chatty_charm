@@ -11,13 +11,16 @@ class UserDataListView extends StatelessWidget {
       required this.firstName,
       required this.lastName,
       required this.username,
-      required this.gender});
+      required this.gender,
+      required this.enabled});
   final TextEditingController firstName, lastName, username, gender;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) {
     var items = [
       TextFieldModel(
+          enabled: enabled,
           hintText: S.of(context).first_name,
           controller: firstName,
           validator: (value) {
@@ -30,6 +33,7 @@ class UserDataListView extends StatelessWidget {
             return null;
           }),
       TextFieldModel(
+          enabled: enabled,
           hintText: S.of(context).last_name,
           controller: lastName,
           validator: (value) {
@@ -46,6 +50,7 @@ class UserDataListView extends StatelessWidget {
             return null;
           }),
       TextFieldModel(
+          enabled: enabled,
           hintText: S.of(context).username,
           controller: username,
           validator: (value) {
@@ -58,7 +63,8 @@ class UserDataListView extends StatelessWidget {
             if (value.length > 9 &&
                 firstName.text.isNotEmpty &&
                 lastName.text.isNotEmpty &&
-                firstName.text.length <= 9) {
+                firstName.text.length <= 9 &&
+                lastName.text.length <= 9) {
               return '${S.of(context).username} ${S.of(context).must_be_less_10_characters}';
             }
             return null;
@@ -72,9 +78,9 @@ class UserDataListView extends StatelessWidget {
                 firstName.text.isNotEmpty &&
                 lastName.text.isNotEmpty &&
                 username.text.isNotEmpty &&
-                firstName.text.length < 9 &&
-                lastName.text.length < 9 &&
-                username.text.length < 9) {
+                firstName.text.length <= 9 &&
+                lastName.text.length <= 9 &&
+                username.text.length <= 9) {
               return S.of(context).gender_empty;
             }
             return null;
