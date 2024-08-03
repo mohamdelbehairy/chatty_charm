@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Charm": MessageLookupByLibrary.simpleMessage("تشارم"),
         "Chatty": MessageLookupByLibrary.simpleMessage("شاتي"),
+        "add_user_data_view_1":
+            MessageLookupByLibrary.simpleMessage("يرجى إدخال تفاصيلك أدناه"),
+        "add_user_data_view_2":
+            MessageLookupByLibrary.simpleMessage("لإنشاء حسابك."),
         "already_have_an_account":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
@@ -31,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_soon":
             MessageLookupByLibrary.simpleMessage("سيكون متاحًا قريبًا"),
         "chat": MessageLookupByLibrary.simpleMessage("المحادثات"),
+        "continue_": MessageLookupByLibrary.simpleMessage("أكمل"),
         "copied_to_clipboard":
             MessageLookupByLibrary.simpleMessage("تم النسخ إلى الحافظة"),
         "create_1": MessageLookupByLibrary.simpleMessage(
@@ -45,21 +50,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "expamle": MessageLookupByLibrary.simpleMessage("مثال: بعض النصوص"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
+        "first_name": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
+        "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
         "goes_here": MessageLookupByLibrary.simpleMessage("تدخل هنا"),
         "helper": MessageLookupByLibrary.simpleMessage(
             "أنا هنا لمساعدتك في أي شيء تحتاجه، من الإجابة عن الأسئلة وحتى تقديم التوصيات. دعنا نتحدث!"),
         "language": MessageLookupByLibrary.simpleMessage("اللغات"),
+        "last_name": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "log_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "log_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "login_1": MessageLookupByLibrary.simpleMessage(
             "سجّل دخولك إلى حساب شاتي تشارم"),
         "made_with": MessageLookupByLibrary.simpleMessage("صنع ب ❤️ في 🇪🇬"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("سجل الآن"),
         "select_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
+        "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا في")
       };
 }

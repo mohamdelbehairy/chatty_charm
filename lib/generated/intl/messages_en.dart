@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Charm": MessageLookupByLibrary.simpleMessage("Charm"),
         "Chatty": MessageLookupByLibrary.simpleMessage("Chatty"),
+        "add_user_data_view_1": MessageLookupByLibrary.simpleMessage(
+            "Please enter your details below to"),
+        "add_user_data_view_2":
+            MessageLookupByLibrary.simpleMessage("create your account."),
         "already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
@@ -31,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_soon":
             MessageLookupByLibrary.simpleMessage("It will be available soon"),
         "chat": MessageLookupByLibrary.simpleMessage("Chats"),
+        "continue_": MessageLookupByLibrary.simpleMessage("Continue"),
         "copied_to_clipboard":
             MessageLookupByLibrary.simpleMessage("Copied to clipboard"),
         "create_1": MessageLookupByLibrary.simpleMessage(
@@ -48,16 +53,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "expamle":
             MessageLookupByLibrary.simpleMessage("Example: Some text example"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "first_name": MessageLookupByLibrary.simpleMessage("first name"),
+        "gender": MessageLookupByLibrary.simpleMessage("gender"),
         "goes_here": MessageLookupByLibrary.simpleMessage("goes in here"),
         "helper": MessageLookupByLibrary.simpleMessage(
             "I\'m here to help you with whatever you need, from answering questions to providing recommendations. Let\'s chat."),
         "language": MessageLookupByLibrary.simpleMessage("Languages"),
+        "last_name": MessageLookupByLibrary.simpleMessage("last name"),
         "log_in": MessageLookupByLibrary.simpleMessage("Log in"),
         "log_out": MessageLookupByLibrary.simpleMessage("Log out"),
         "login_1": MessageLookupByLibrary.simpleMessage(
             "Log in to your free Chatty Charm account"),
         "made_with":
             MessageLookupByLibrary.simpleMessage("made with ❤️ in 🇪🇬"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -65,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register now"),
         "select_language":
             MessageLookupByLibrary.simpleMessage("Select a language"),
+        "username": MessageLookupByLibrary.simpleMessage("user name"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome to")
       };
 }

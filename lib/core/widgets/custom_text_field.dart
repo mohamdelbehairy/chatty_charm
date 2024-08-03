@@ -10,19 +10,25 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-        controller: textFieldModel.controller,
-        validator: textFieldModel.validator,
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.all(16),
-            border: borderMethod(),
-            focusedBorder: borderMethod(),
-            enabledBorder: borderMethod(),
-            suffixIcon: textFieldModel.suffixIcon,
-            hintText: textFieldModel.hintText,
-            hintStyle:
-                Styles.regular17.copyWith(color: AppColors.hintTextColor),
-            filled: true,
-            fillColor: AppColors.whiteColor));
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(textFieldModel.enabled ? 0.0 : 12),
+      child: TextFormField(
+          enabled: textFieldModel.enabled,
+          controller: textFieldModel.controller,
+          validator: textFieldModel.validator,
+          style: Styles.regular17,
+          decoration: InputDecoration(
+              contentPadding: const EdgeInsets.all(16),
+              border:
+                  textFieldModel.enabled ? borderMethod() : InputBorder.none,
+              focusedBorder: borderMethod(),
+              enabledBorder: borderMethod(),
+              suffixIcon: textFieldModel.suffixIcon,
+              hintText: textFieldModel.hintText,
+              hintStyle:
+                  Styles.regular17.copyWith(color: AppColors.hintTextColor),
+              filled: true,
+              fillColor: AppColors.whiteColor)),
+    );
   }
 }

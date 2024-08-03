@@ -349,6 +349,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter your details below to`
+  String get add_user_data_view_1 {
+    return Intl.message(
+      'Please enter your details below to',
+      name: 'add_user_data_view_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `create your account.`
+  String get add_user_data_view_2 {
+    return Intl.message(
+      'create your account.',
+      name: 'add_user_data_view_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `first name`
+  String get first_name {
+    return Intl.message(
+      'first name',
+      name: 'first_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `last name`
+  String get last_name {
+    return Intl.message(
+      'last name',
+      name: 'last_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `user name`
+  String get username {
+    return Intl.message(
+      'user name',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `gender`
+  String get gender {
+    return Intl.message(
+      'gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continue_ {
+    return Intl.message(
+      'Continue',
+      name: 'continue_',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

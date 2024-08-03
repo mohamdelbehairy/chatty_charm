@@ -28,5 +28,14 @@
     "login_1": "سجّل دخولك إلى حساب شاتي تشارم",
     "not_have_an_account": "ليس لديك حساب؟",
     "register": "سجل الآن",
-    "delete_account": "حذف الحساب"
+    "delete_account": "حذف الحساب",
+    "add_user_data_view_1": "يرجى إدخال تفاصيلك أدناه",
+    "add_user_data_view_2": "لإنشاء حسابك.",
+    "first_name": "الاسم الاول",
+    "last_name": "الاسم الأخير",
+    "username": "اسم المستخدم",
+    "gender": "الجنس",
+    "continue_": "أكمل",
+    "male": "ذكر",
+    "female": "أنثى"
 }

@@ -28,5 +28,14 @@
     "login_1": "Log in to your free Chatty Charm account",
     "not_have_an_account": "Don't have an account?",
     "register": "Register now",
-    "delete_account": "Delete account"
+    "delete_account": "Delete account",
+    "add_user_data_view_1": "Please enter your details below to",
+    "add_user_data_view_2": "create your account.",
+    "first_name": "first name",
+    "last_name": "last name",
+    "username": "user name",
+    "gender": "gender",
+    "continue_": "Continue",
+    "male": "Male",
+    "female": "Female"
 }
