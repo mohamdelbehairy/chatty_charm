@@ -42,16 +42,13 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           scrollController.animateTo(scrollController.position.maxScrollExtent,
               duration: const Duration(seconds: 1), curve: Curves.easeIn);
         }
-        if (state is ChatSuccess) {
-          scrollController.animateTo(scrollController.position.maxScrollExtent,
-              duration: const Duration(seconds: 1), curve: Curves.easeIn);
-        }
       },
       builder: (context, state) {
         return CustomScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           slivers: [
             SliverFillRemaining(
-              hasScrollBody: false,
+              hasScrollBody: true,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(

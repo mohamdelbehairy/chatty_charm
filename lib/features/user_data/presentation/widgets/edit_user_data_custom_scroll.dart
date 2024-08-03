@@ -1,23 +1,23 @@
-import 'package:chatty_charm/core/utils/app_router.dart';
-import 'package:chatty_charm/generated/l10n.dart';
+import 'package:chatty_charm/core/manager/get_user_data/get_user_data_cubit.dart';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../auth/presentation/widgets/welcome_auth_section.dart';
-import '../../data/manager/store_user_data/store_user_data_cubit.dart';
-import 'add_user_data_button.dart';
+import 'edit_user_data_buttons.dart';
 import 'user_data_list_view.dart';
 
-class AddserDataViewComponent extends StatefulWidget {
-  const AddserDataViewComponent({super.key});
+class EditUserDataCustomScroll extends StatefulWidget {
+  const EditUserDataCustomScroll({super.key, required this.enabled});
+  final bool enabled;
 
   @override
-  State<AddserDataViewComponent> createState() =>
-      _AddserDataViewComponentState();
+  State<EditUserDataCustomScroll> createState() =>
+      _EditUserDataCustomScrollState();
 }
 
-class _AddserDataViewComponentState extends State<AddserDataViewComponent> {
+class _EditUserDataCustomScrollState extends State<EditUserDataCustomScroll> {
   TextEditingController firstName = TextEditingController();
   TextEditingController lastName = TextEditingController();
   TextEditingController username = TextEditingController();
@@ -36,41 +36,38 @@ class _AddserDataViewComponentState extends State<AddserDataViewComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<StoreUserDataCubit, StoreUserDataState>(
-      listener: (context, state) {
-        if (state is StoreUserDataSuccess) {
-          GoRouter.of(context).go(AppRouter.loginView);
-          firstName.clear();
-          lastName.clear();
-          username.clear();
-          gender.clear();
-        }
-      },
+    var user = context.read<GetUserDataCubit>();
+    return BlocBuilder<GetUserDataCubit, GetUserDataState>(
       builder: (context, state) {
+        final userData = user.user.firstWhere((element) =>
+            element.userID == FirebaseAuth.instance.currentUser!.uid);
+        firstName.text = userData.firstName;
+        lastName.text = userData.lastName;
+        username.text = userData.username;
+        gender.text = userData.gender;
         return Form(
           key: formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(flex: 2),
-              WelcomeAuthSection(
-                  text:
-                      '${S.of(context).add_user_data_view_1}\n${S.of(context).add_user_data_view_2}'),
+              const WelcomeAuthSection(text: ''),
               UserDataListView(
-                  enabled: state is StoreUserDataLoading ? false : true,
+                  enabled: true,
                   firstName: firstName,
                   lastName: lastName,
                   username: username,
                   gender: gender),
               const SizedBox(height: 8),
-              AddUserDataButton(
-                  isLoading: state is StoreUserDataLoading ? true : false,
+              EditUserDataButtons(
                   firstName: firstName,
                   lastName: lastName,
                   username: username,
                   gender: gender,
+                  userData: userData,
                   formKey: formKey),
               const Spacer(),
+              // const SizedBox(height: 8),
             ],
           ),
         );

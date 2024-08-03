@@ -43,12 +43,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_2": MessageLookupByLibrary.simpleMessage("واشعل فضولك!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("أنشئ حسابًا مجانيًا"),
+        "data_updated":
+            MessageLookupByLibrary.simpleMessage("تم تحديث البيانات بنجاح"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "delete_account": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "delete_account_": MessageLookupByLibrary.simpleMessage("حذف الحساب؟"),
         "delete_message": MessageLookupByLibrary.simpleMessage(
             "هل أنت متأكد من أنك تريد حذف حسابك؟ سيتم حذف جميع البيانات التي لديك. هذا الخطوة لا يمكن التراجع عنها."),
         "developer_name": MessageLookupByLibrary.simpleMessage("محمد البحيري"),
+        "discard": MessageLookupByLibrary.simpleMessage("تجاهل"),
         "edit_profile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -97,7 +100,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "كلمة المرور يجب ان تكون على الأقل 8 حروف"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("سجل الآن"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "select_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
+        "update_details_1":
+            MessageLookupByLibrary.simpleMessage("لتحديث معلومات حسابك، يرجى"),
+        "update_details_2": MessageLookupByLibrary.simpleMessage(
+            "إدخال التفاصيل الجديدة أدناه."),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "username_empty":
             MessageLookupByLibrary.simpleMessage("اسم المستخدم مطلوب"),

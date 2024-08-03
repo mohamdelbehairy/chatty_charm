@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'add_user_data_view_component.dart';
+import 'add_user_data_custom_scroll.dart';
 
 class AddUserDataViewBody extends StatelessWidget {
   const AddUserDataViewBody({super.key});
@@ -11,7 +11,7 @@ class AddUserDataViewBody extends StatelessWidget {
       child: CustomScrollView(slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
-          child: AddserDataViewComponent(),
+          child: AddserDataCustomScroll(),
         ),
       ]),
     );

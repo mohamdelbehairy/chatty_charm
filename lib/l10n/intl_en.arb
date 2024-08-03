@@ -54,5 +54,10 @@
     "no": "no",
     "delete_account_": "Delete Account?",
     "delete_message": "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!",
-    "delete": "Delete"
+    "delete": "Delete",
+    "update_details_1": "To update your account information, please",
+    "update_details_2": "enter the new details below.",
+    "save": "Save",
+    "discard": "Discard",
+    "data_updated": "data updated successfully"
 }

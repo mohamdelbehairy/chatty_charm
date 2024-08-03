@@ -18,10 +18,12 @@ class CustomButton extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               color: buttonModel.buttonColor,
+              border: buttonModel.border,
               borderRadius: BorderRadius.circular(buttonModel.borderRadius)),
           child: Center(
             child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                padding:
+                    EdgeInsets.symmetric(vertical: buttonModel.verticalPadding),
                 child: buttonModel.isLoading
                     ? const CustomCircleIndicator()
                     : Text(buttonModel.buttonName,

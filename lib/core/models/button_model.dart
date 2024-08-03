@@ -6,8 +6,9 @@ class ButtonModel {
   final Function() onPressed;
   final bool isLoading;
   final Color buttonColor;
-  final double borderRadius;
+  final double borderRadius, verticalPadding;
   final TextStyle? style;
+  final BoxBorder? border;
 
   ButtonModel(
       {required this.buttonName,
@@ -15,5 +16,7 @@ class ButtonModel {
       this.isLoading = false,
       this.buttonColor = AppColors.primaryColor,
       this.borderRadius = 12,
-      this.style});
+      this.style,
+      this.border,
+      this.verticalPadding = 16});
 }

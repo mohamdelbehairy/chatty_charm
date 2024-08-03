@@ -4,8 +4,6 @@ sealed class GetUserDataState {}
 
 final class GetUserDataInitial extends GetUserDataState {}
 
-final class GetUserDataLoading extends GetUserDataState {}
-
 final class GetUserDataSuccess extends GetUserDataState {}
 
 final class GetUserDataFailure extends GetUserDataState {

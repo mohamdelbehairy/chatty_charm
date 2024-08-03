@@ -6,8 +6,7 @@ import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeAuthSection extends StatelessWidget {
-  const WelcomeAuthSection(
-      {super.key, required this.text});
+  const WelcomeAuthSection({super.key, required this.text});
   final String text;
 
   @override
@@ -23,7 +22,7 @@ class WelcomeAuthSection extends StatelessWidget {
             style: Styles.semiBold20),
         const SizedBox(height: 4),
         Text(text, textAlign: TextAlign.center, style: Styles.regular17),
-        const SizedBox(height: 34),
+        if (text.isNotEmpty) const SizedBox(height: 34),
       ],
     );
   }

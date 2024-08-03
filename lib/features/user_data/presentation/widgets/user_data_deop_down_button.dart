@@ -11,7 +11,7 @@ class UserDataDropDownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: MediaQuery.sizeOf(context).height * .01,
+      top: MediaQuery.sizeOf(context).height * .005,
       right: context.read<IsArabicCubit>().isArabic() ? null : 4.0,
       left: context.read<IsArabicCubit>().isArabic() ? 4.0 : null,
       child: DropdownButton(
@@ -20,10 +20,9 @@ class UserDataDropDownButton extends StatelessWidget {
           underline: const SizedBox(),
           icon: const Icon(Icons.arrow_drop_down, size: 35),
           items: [
+            DropdownMenuItem(value: 'male', child: Text(S.of(context).male)),
             DropdownMenuItem(
-                value: S.of(context).male, child: Text(S.of(context).male)),
-            DropdownMenuItem(
-                value: S.of(context).female, child: Text(S.of(context).female)),
+                value: 'female', child: Text(S.of(context).female)),
           ],
           onChanged: (value) {
             gender.text = value.toString();

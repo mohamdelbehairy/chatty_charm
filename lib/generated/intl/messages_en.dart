@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("and ignite your curiosity!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("Create FREE account"),
+        "data_updated":
+            MessageLookupByLibrary.simpleMessage("data updated successfully"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "delete_account":
             MessageLookupByLibrary.simpleMessage("Delete account"),
@@ -53,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!"),
         "developer_name":
             MessageLookupByLibrary.simpleMessage("Mohamed El-Behairy"),
+        "discard": MessageLookupByLibrary.simpleMessage("Discard"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email address"),
         "email_already_in_use": MessageLookupByLibrary.simpleMessage(
@@ -103,8 +106,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "password must be at least 8 characters"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "register": MessageLookupByLibrary.simpleMessage("Register now"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "select_language":
             MessageLookupByLibrary.simpleMessage("Select a language"),
+        "update_details_1": MessageLookupByLibrary.simpleMessage(
+            "To update your account information, please"),
+        "update_details_2": MessageLookupByLibrary.simpleMessage(
+            "enter the new details below."),
         "username": MessageLookupByLibrary.simpleMessage("user name"),
         "username_empty":
             MessageLookupByLibrary.simpleMessage("username is required"),

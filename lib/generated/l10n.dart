@@ -609,6 +609,56 @@ class S {
       args: [],
     );
   }
+
+  /// `To update your account information, please`
+  String get update_details_1 {
+    return Intl.message(
+      'To update your account information, please',
+      name: 'update_details_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `enter the new details below.`
+  String get update_details_2 {
+    return Intl.message(
+      'enter the new details below.',
+      name: 'update_details_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discard`
+  String get discard {
+    return Intl.message(
+      'Discard',
+      name: 'discard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `data updated successfully`
+  String get data_updated {
+    return Intl.message(
+      'data updated successfully',
+      name: 'data_updated',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
