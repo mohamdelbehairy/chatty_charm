@@ -27,5 +27,6 @@
     "log_in": "Log in",
     "login_1": "Log in to your free Chatty Charm account",
     "not_have_an_account": "Don't have an account?",
-    "register": "Register now"
+    "register": "Register now",
+    "delete_account": "Delete account"
 }

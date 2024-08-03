@@ -1,5 +1,5 @@
 import 'package:chatty_charm/core/utils/constants/api_key.dart';
-import 'package:chatty_charm/features/chat/data/models/message_model.dart';
+import 'package:chatty_charm/features/home/data/models/message_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';

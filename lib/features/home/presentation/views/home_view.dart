@@ -1,13 +1,13 @@
-import 'package:chatty_charm/features/chat/data/manager/chat/chat_cubit.dart';
-import 'package:chatty_charm/features/chat/data/manager/copy_text/copy_text_cubit.dart';
-import 'package:chatty_charm/features/chat/presentation/widgets/chat_view_body.dart';
+import 'package:chatty_charm/features/home/data/manager/chat/chat_cubit.dart';
+import 'package:chatty_charm/features/home/data/manager/copy_text/copy_text_cubit.dart';
+import 'package:chatty_charm/features/home/presentation/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../widgets/chat_view_app_bar.dart';
 
-class ChatView extends StatelessWidget {
-  const ChatView({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ChatView extends StatelessWidget {
       ],
       child: Scaffold(
         appBar: chatViewAppBar(context),
-        body: const ChatViewBody(),
+        body: const HomeViewBody(),
       ),
     );
   }

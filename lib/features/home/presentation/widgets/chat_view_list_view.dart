@@ -1,4 +1,4 @@
-import 'package:chatty_charm/features/chat/data/manager/chat/chat_cubit.dart';
+import 'package:chatty_charm/features/home/data/manager/chat/chat_cubit.dart';
 import 'package:flutter/material.dart';
 
 import 'bot_card_item.dart';

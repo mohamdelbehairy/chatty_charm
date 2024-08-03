@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_2": MessageLookupByLibrary.simpleMessage("واشعل فضولك!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("أنشئ حسابًا مجانيًا"),
+        "delete_account": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "developer_name": MessageLookupByLibrary.simpleMessage("محمد البحيري"),
         "edit_profile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),

@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("and ignite your curiosity!"),
         "create_free_account":
             MessageLookupByLibrary.simpleMessage("Create FREE account"),
+        "delete_account":
+            MessageLookupByLibrary.simpleMessage("Delete account"),
         "developer_name":
             MessageLookupByLibrary.simpleMessage("Mohamed El-Behairy"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),

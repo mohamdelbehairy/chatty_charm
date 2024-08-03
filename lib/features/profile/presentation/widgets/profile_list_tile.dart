@@ -1,5 +1,6 @@
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
+import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
 import 'package:chatty_charm/features/profile/data/models/profile_list_tile_model.dart';
@@ -16,12 +17,18 @@ class ProfileListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         leading: Transform.rotate(
-            angle: context.read<IsArabicCubit>().isArabic() &&
-                    profileListTileModel.index == 3
+            angle: (context.read<IsArabicCubit>().isArabic() &&
+                        profileListTileModel.index == 4) ||
+                    (!context.read<IsArabicCubit>().isArabic() &&
+                        profileListTileModel.index == 3)
                 ? 180 * 3.14 / 180
                 : 0,
             child: CustomSvgPicture(
-                svg: SvgPictureModel(image: profileListTileModel.image))),
+                svg: SvgPictureModel(
+                    image: profileListTileModel.image,
+                    fit: BoxFit.scaleDown,
+                    height: profileListTileModel.height,
+                    color: AppColors.primaryColor))),
         title: Text(profileListTileModel.title,
             style: Styles.regular17.copyWith(color: const Color(0xff403E39))),
         trailing: Transform.rotate(

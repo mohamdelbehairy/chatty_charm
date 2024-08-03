@@ -24,7 +24,12 @@ class ProfileSettingListView extends StatelessWidget {
       ProfileListTileModel(
           index: 2, title: S.of(context).chat, image: Assets.imagesDocs),
       ProfileListTileModel(
-          index: 3, title: S.of(context).log_out, image: Assets.imagesLogOut),
+          index: 3,
+          title:  S.of(context).delete_account,
+          image: Assets.imagesDelete,
+          height: 25),
+      ProfileListTileModel(
+          index: 4, title: S.of(context).log_out, image: Assets.imagesLogOut),
     ];
     return Column(
       children: List.generate(items.length, (index) {
@@ -37,14 +42,15 @@ class ProfileSettingListView extends StatelessWidget {
               customBottomSheet(
                   context: context, child: const LanguageBottomSheet());
             } else if (index == 2) {
+            } else if (index == 3) {
             } else {}
           },
           child: ProfileSettingItem(
               profileListTileModel: ProfileListTileModel(
-            index: items[index].index,
-            title: items[index].title,
-            image: items[index].image,
-          )),
+                  index: items[index].index,
+                  title: items[index].title,
+                  image: items[index].image,
+                  height: items[index].height)),
         );
       }),
     );

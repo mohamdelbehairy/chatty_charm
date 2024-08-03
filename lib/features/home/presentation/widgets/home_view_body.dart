@@ -1,4 +1,4 @@
-import 'package:chatty_charm/features/chat/data/manager/chat/chat_cubit.dart';
+import 'package:chatty_charm/features/home/data/manager/chat/chat_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -8,14 +8,14 @@ import 'chat_view_list_view.dart';
 import 'chat_view_not_messages.dart';
 import 'chat_view_text_field.dart';
 
-class ChatViewBody extends StatefulWidget {
-  const ChatViewBody({super.key});
+class HomeViewBody extends StatefulWidget {
+  const HomeViewBody({super.key});
 
   @override
-  State<ChatViewBody> createState() => _ChatViewBodyState();
+  State<HomeViewBody> createState() => _HomeViewBodyState();
 }
 
-class _ChatViewBodyState extends State<ChatViewBody> {
+class _HomeViewBodyState extends State<HomeViewBody> {
   TextEditingController controller = TextEditingController();
   final scrollController = ScrollController();
 
@@ -66,4 +66,3 @@ class _ChatViewBodyState extends State<ChatViewBody> {
     );
   }
 }
-

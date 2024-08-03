@@ -1,4 +1,4 @@
-import 'package:chatty_charm/features/chat/presentation/widgets/card_text.dart';
+import 'package:chatty_charm/features/home/presentation/widgets/card_text.dart';
 import 'package:flutter/material.dart';
 
 import 'border_radius_method.dart';
