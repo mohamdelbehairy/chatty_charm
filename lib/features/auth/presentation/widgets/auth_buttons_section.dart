@@ -13,9 +13,10 @@ class AuthButtonsSection extends StatelessWidget {
     return Column(
       children: [
         CustomButton(
+            isLoading: authButtonsModel.isLoading,
             text: authButtonsModel.buttonName,
             onPressed: authButtonsModel.buttonTap),
-        const SizedBox(height: 24),
+        const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

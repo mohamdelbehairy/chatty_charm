@@ -48,29 +48,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_profile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_empty":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
+        "email_valid":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني غير صالح"),
         "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "expamle": MessageLookupByLibrary.simpleMessage("مثال: بعض النصوص"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "first_name": MessageLookupByLibrary.simpleMessage("الاسم الاول"),
+        "first_name_empty":
+            MessageLookupByLibrary.simpleMessage("الاسم الاول مطلوب"),
         "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "gender_empty": MessageLookupByLibrary.simpleMessage("الجنس مطلوب"),
         "goes_here": MessageLookupByLibrary.simpleMessage("تدخل هنا"),
         "helper": MessageLookupByLibrary.simpleMessage(
             "أنا هنا لمساعدتك في أي شيء تحتاجه، من الإجابة عن الأسئلة وحتى تقديم التوصيات. دعنا نتحدث!"),
         "language": MessageLookupByLibrary.simpleMessage("اللغات"),
         "last_name": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
+        "last_name_empty":
+            MessageLookupByLibrary.simpleMessage("الاسم الأخير مطلوب"),
         "log_in": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "log_out": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "login_1": MessageLookupByLibrary.simpleMessage(
             "سجّل دخولك إلى حساب شاتي تشارم"),
         "made_with": MessageLookupByLibrary.simpleMessage("صنع ب ❤️ في 🇪🇬"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "must_be_less_10_characters":
+            MessageLookupByLibrary.simpleMessage("يجب ان يكون اقل من 10 حروف"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_empty":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة"),
+        "password_valid": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور يجب ان تكون على الأقل 8 حروف"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("سجل الآن"),
         "select_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
+        "username_empty":
+            MessageLookupByLibrary.simpleMessage("اسم المستخدم مطلوب"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا في")
       };
 }

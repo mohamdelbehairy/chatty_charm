@@ -8,7 +8,7 @@ import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static const registerView = "/registerView";
-  static const chatView = "/chatView";
+  static const homeView = "/homeView";
   static const profileView = "/profileView";
   static const loginView = "/loginView";
   static const addUserDataView = "/addUserDataView";
@@ -18,7 +18,7 @@ class AppRouter {
       GoRoute(
           path: registerView,
           builder: (context, state) => const RegisterView()),
-      GoRoute(path: chatView, builder: (context, state) => const HomeView()),
+      GoRoute(path: homeView, builder: (context, state) => const HomeView()),
       GoRoute(
           path: profileView, builder: (context, state) => const ProfileView()),
       GoRoute(path: loginView, builder: (context, state) => const LoginView()),

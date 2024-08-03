@@ -12,7 +12,7 @@ class ProfileDeveloperSetion extends StatelessWidget {
       children: [
         Text(S.of(context).made_with,
             textAlign: TextAlign.center,
-            style: Styles.semiBold20.copyWith(fontSize: 18)),
+            style: Styles.semiBold20.copyWith(fontSize: 16)),
         Text(S.of(context).developer_name,
             style: Styles.semiBold20.copyWith(fontSize: 12)),
         const SizedBox(height: 16),

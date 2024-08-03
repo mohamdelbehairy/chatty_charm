@@ -13,6 +13,8 @@ class CustomTextField extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(textFieldModel.enabled ? 0.0 : 12),
       child: TextFormField(
+         keyboardType: textFieldModel.keyboardType,
+          obscureText: textFieldModel.obscureText,
           enabled: textFieldModel.enabled,
           controller: textFieldModel.controller,
           validator: textFieldModel.validator,

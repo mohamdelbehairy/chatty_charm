@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1031073810417",
+    "project_id": "chatty-charm",
+    "storage_bucket": "chatty-charm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031073810417:android:42a18c297d1d46a075a650",
+        "android_client_info": {
+          "package_name": "com.example.chatty_charm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJQiolISpWC-jDscivqtg4YI7BOY_gFfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

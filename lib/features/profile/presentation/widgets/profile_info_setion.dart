@@ -12,9 +12,9 @@ class ProfileInfoSection extends StatelessWidget {
         const SizedBox(height: 16),
         Image.asset(Assets.imagesProfile),
         const SizedBox(height: 8),
-        const Text('Shambhavi Mishra', style: Styles.semiBold28),
+        Text('Shambhavi Mishra', style: Styles.semiBold28),
         const SizedBox(height: 4),
-        const Text('@m.shambhavi', style: Styles.regular20),
+        Text('@m.shambhavi', style: Styles.regular20),
         const SizedBox(height: 16),
       ],
     );

@@ -37,5 +37,14 @@
     "gender": "الجنس",
     "continue_": "أكمل",
     "male": "ذكر",
-    "female": "أنثى"
+    "female": "أنثى",
+    "email_empty": "البريد الإلكتروني مطلوب",
+    "email_valid": "البريد الإلكتروني غير صالح",
+    "password_empty": "كلمة المرور مطلوبة",
+    "password_valid": "كلمة المرور يجب ان تكون على الأقل 8 حروف",
+    "first_name_empty": "الاسم الاول مطلوب",
+    "last_name_empty": "الاسم الأخير مطلوب",
+    "username_empty": "اسم المستخدم مطلوب",
+    "gender_empty": "الجنس مطلوب",
+    "must_be_less_10_characters": "يجب ان يكون اقل من 10 حروف"
 }

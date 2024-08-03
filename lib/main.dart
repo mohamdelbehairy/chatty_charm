@@ -2,6 +2,8 @@ import 'package:chatty_charm/core/helper/bloc_observer.dart';
 import 'package:chatty_charm/core/manager/select_language/select_language_cubit.dart';
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/colors.dart';
+import 'package:chatty_charm/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -9,7 +11,11 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/manager/is_arabic/is_arabic_cubit.dart';
 import 'generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   Bloc.observer = SimpleBlocObserver();
   runApp(const ChattyCharm());
 }

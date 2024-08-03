@@ -22,10 +22,10 @@ class UserDataListView extends StatelessWidget {
           controller: firstName,
           validator: (value) {
             if (value!.isEmpty) {
-              return 'first name must not be empty';
+              return S.of(context).first_name_empty;
             }
             if (value.length > 9) {
-              return 'first name must be less than 10 characters';
+              return '${S.of(context).first_name} ${S.of(context).must_be_less_10_characters}';
             }
             return null;
           }),
@@ -33,11 +33,15 @@ class UserDataListView extends StatelessWidget {
           hintText: S.of(context).last_name,
           controller: lastName,
           validator: (value) {
-            if (value!.isEmpty && firstName.text.isNotEmpty) {
-              return 'last name must not be empty';
+            if (value!.isEmpty &&
+                firstName.text.isNotEmpty &&
+                firstName.text.length <= 9) {
+              return S.of(context).last_name_empty;
             }
-            if (value.length > 9) {
-              return 'last name must be less than 10 characters';
+            if (value.length > 9 &&
+                firstName.text.isNotEmpty &&
+                firstName.text.length <= 9) {
+              return '${S.of(context).last_name} ${S.of(context).must_be_less_10_characters}';
             }
             return null;
           }),
@@ -47,11 +51,15 @@ class UserDataListView extends StatelessWidget {
           validator: (value) {
             if (value!.isEmpty &&
                 firstName.text.isNotEmpty &&
-                lastName.text.isNotEmpty) {
-              return 'username must not be empty';
+                lastName.text.isNotEmpty &&
+                firstName.text.length <= 9) {
+              return S.of(context).username_empty;
             }
-            if (value.length > 11) {
-              return 'username must be less than 10 characters';
+            if (value.length > 9 &&
+                firstName.text.isNotEmpty &&
+                lastName.text.isNotEmpty &&
+                firstName.text.length <= 9) {
+              return '${S.of(context).username} ${S.of(context).must_be_less_10_characters}';
             }
             return null;
           }),
@@ -63,8 +71,11 @@ class UserDataListView extends StatelessWidget {
             if (value!.isEmpty &&
                 firstName.text.isNotEmpty &&
                 lastName.text.isNotEmpty &&
-                username.text.isNotEmpty) {
-              return 'gender must not be empty';
+                username.text.isNotEmpty &&
+                firstName.text.length < 9 &&
+                lastName.text.length < 9 &&
+                username.text.length < 9) {
+              return S.of(context).gender_empty;
             }
             return null;
           })

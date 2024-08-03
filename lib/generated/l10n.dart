@@ -439,6 +439,96 @@ class S {
       args: [],
     );
   }
+
+  /// `email address is required`
+  String get email_empty {
+    return Intl.message(
+      'email address is required',
+      name: 'email_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `invalid email address`
+  String get email_valid {
+    return Intl.message(
+      'invalid email address',
+      name: 'email_valid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `password is required`
+  String get password_empty {
+    return Intl.message(
+      'password is required',
+      name: 'password_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `password must be at least 8 characters`
+  String get password_valid {
+    return Intl.message(
+      'password must be at least 8 characters',
+      name: 'password_valid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `first name is required`
+  String get first_name_empty {
+    return Intl.message(
+      'first name is required',
+      name: 'first_name_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `last name is required`
+  String get last_name_empty {
+    return Intl.message(
+      'last name is required',
+      name: 'last_name_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `username is required`
+  String get username_empty {
+    return Intl.message(
+      'username is required',
+      name: 'username_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `gender is required`
+  String get gender_empty {
+    return Intl.message(
+      'gender is required',
+      name: 'gender_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `must be less than 10 characters`
+  String get must_be_less_10_characters {
+    return Intl.message(
+      'must be less than 10 characters',
+      name: 'must_be_less_10_characters',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -37,5 +37,14 @@
     "gender": "gender",
     "continue_": "Continue",
     "male": "Male",
-    "female": "Female"
+    "female": "Female",
+    "email_empty": "email address is required",
+    "email_valid": "invalid email address",
+    "password_empty": "password is required",
+    "password_valid": "password must be at least 8 characters",
+    "first_name_empty": "first name is required",
+    "last_name_empty": "last name is required",
+    "username_empty": "username is required",
+    "gender_empty": "gender is required",
+    "must_be_less_10_characters": "must be less than 10 characters"
 }

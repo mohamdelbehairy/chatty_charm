@@ -41,26 +41,33 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         }
       },
       builder: (context, state) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              const SizedBox(height: 8),
-              if (messages.messages.isNotEmpty)
-                ChatViewListView(
-                    messages: messages,
-                    controller: controller,
-                    scrollController: scrollController)
-              else
-                const ChatViewNotMessages(),
-              ChatViewTextField(
-                  controller: controller,
-                  onPressed: () async {
-                    await messages.sendMessage(controller: controller);
-                  }),
-              const SizedBox(height: 50),
-            ],
-          ),
+        return CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 8),
+                    if (messages.messages.isNotEmpty)
+                      ChatViewListView(
+                          messages: messages,
+                          controller: controller,
+                          scrollController: scrollController)
+                    else
+                      const ChatViewNotMessages(),
+                    ChatViewTextField(
+                        controller: controller,
+                        onPressed: () async {
+                          await messages.sendMessage(controller: controller);
+                        }),
+                    const SizedBox(height: 30),
+                  ],
+                ),
+              ),
+            )
+          ],
         );
       },
     );

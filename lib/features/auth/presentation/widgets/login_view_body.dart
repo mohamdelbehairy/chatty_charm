@@ -21,7 +21,10 @@ class LoginViewBody extends StatelessWidget {
               const Spacer(flex: 2),
               WelcomeAuthSection(
                   text: '${S.of(context).login_1}\n ${S.of(context).create_2}'),
-              const AuthTextFieldsSection(),
+              AuthTextFieldsSection(
+                  email: TextEditingController(),
+                  password: TextEditingController(),
+                  enabled: true),
               const Expanded(child: SizedBox(height: 24)),
               const LoginViewButtonsSection(),
               const Spacer(),
