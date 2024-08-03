@@ -1,3 +1,4 @@
+import 'package:chatty_charm/core/manager/get_user_data/get_user_data_cubit.dart';
 import 'package:chatty_charm/features/home/data/manager/chat/chat_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,12 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   TextEditingController controller = TextEditingController();
   final scrollController = ScrollController();
+
+  @override
+  void initState() {
+    context.read<GetUserDataCubit>().getUserData();
+    super.initState();
+  }
 
   @override
   void dispose() {

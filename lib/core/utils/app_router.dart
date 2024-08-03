@@ -4,6 +4,7 @@ import 'package:chatty_charm/features/home/presentation/views/home_view.dart';
 import 'package:chatty_charm/features/profile/presentation/views/profile_view.dart';
 import 'package:chatty_charm/features/splash/presentation/views/splash_view.dart';
 import 'package:chatty_charm/features/user_data/presentation/views/add_user_data_view.dart';
+import 'package:chatty_charm/features/user_data/presentation/views/edit_user_data_view.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -12,6 +13,7 @@ class AppRouter {
   static const profileView = "/profileView";
   static const loginView = "/loginView";
   static const addUserDataView = "/addUserDataView";
+  static const editUserDataView = "/editUserDataView";
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
@@ -25,6 +27,9 @@ class AppRouter {
       GoRoute(
           path: addUserDataView,
           builder: (context, state) => const AddUserDataView()),
+      GoRoute(
+          path: editUserDataView,
+          builder: (context, state) => const EditUserDataView()),
     ],
   );
 }

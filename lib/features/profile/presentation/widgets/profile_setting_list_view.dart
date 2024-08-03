@@ -35,7 +35,9 @@ class ProfileSettingListView extends StatelessWidget {
         return InkWell(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
-          onTap: () => onTap(context, index),
+          onTap: () {
+            onTap(context, index);
+          },
           child: ProfileSettingItem(
               profileListTileModel: ProfileListTileModel(
                   index: items[index].index,

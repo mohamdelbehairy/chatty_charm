@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'core/manager/get_user_data/get_user_data_cubit.dart';
 import 'core/manager/is_arabic/is_arabic_cubit.dart';
 import 'generated/l10n.dart';
 
@@ -29,6 +30,7 @@ class ChattyCharm extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => IsArabicCubit()),
         BlocProvider(create: (context) => SelectLanguageCubit()),
+        BlocProvider(create: (context) => GetUserDataCubit()),
       ],
       child: BlocBuilder<SelectLanguageCubit, SelectLanguageState>(
         builder: (context, state) {
