@@ -51,6 +51,7 @@ class _LoginViewCustomScrollState extends State<LoginViewCustomScroll> {
             children: [
               const Spacer(flex: 2),
               WelcomeAuthSection(
+                  isAllow: false,
                   text: '${S.of(context).login_1}\n ${S.of(context).create_2}'),
               AuthTextFieldsSection(
                   email: email,

@@ -51,6 +51,7 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
             children: [
               const Spacer(flex: 2),
               WelcomeAuthSection(
+                  isAllow: false,
                   text: '${S.of(context).create_1}\n${S.of(context).create_2}'),
               AuthTextFieldsSection(
                   email: email,

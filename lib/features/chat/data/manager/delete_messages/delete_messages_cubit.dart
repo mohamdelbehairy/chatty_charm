@@ -7,10 +7,10 @@ part 'delete_messages_state.dart';
 class DeleteMessagesCubit extends Cubit<DeleteMessagesState> {
   DeleteMessagesCubit() : super(DeleteMessagesInitial());
 
-  final deleteMessagesService = DeleteMessagesService();
+  final _deleteMessagesService = DeleteMessagesService();
   Future<void> deleteMessages() async {
     emit(DeleteMessagesLoading());
-    await deleteMessagesService.deleteMessages().then((value) {
+    await _deleteMessagesService.deleteMessages().then((value) {
       emit(DeleteMessagesSuccess());
     }).catchError((e) {
       emit(DeleteMessagesFailure(errorMessage: e.toString()));
@@ -19,6 +19,6 @@ class DeleteMessagesCubit extends Cubit<DeleteMessagesState> {
   }
 
   Future<bool> isMessage() async {
-    return await deleteMessagesService.isMessage();
+    return await _deleteMessagesService.isMessage();
   }
 }

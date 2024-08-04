@@ -1,4 +1,5 @@
 import 'package:chatty_charm/core/helper/bloc_observer.dart';
+import 'package:chatty_charm/core/utils/svg_utils.dart';
 import 'package:chatty_charm/features/auth/presentation/views/login_view.dart';
 import 'package:chatty_charm/features/home/presentation/views/home_view.dart';
 
@@ -12,6 +13,7 @@ import 'features/app/presentation/views/chatty_charm.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  CachedSvg.svgPrecacheImage();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

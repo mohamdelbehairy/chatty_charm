@@ -14,24 +14,27 @@ class ChatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<DeleteMessagesCubit, DeleteMessagesState>(
-      listener: (context, state) {
-        if (state is DeleteMessagesSuccess) {
-          customSnackBar(context, S.of(context).delete_success);
-        }
-      },
-      builder: (context, state) {
-        return ModalProgressHUD(
-          inAsyncCall: state is DeleteMessagesLoading ? true : false,
-          progressIndicator: customLoadingAnimationIndicator(),
-          child: Scaffold(
-            appBar: chatViewAppBar(context),
-            body: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                child: CahtViewBody()),
-          ),
-        );
-      },
+    return BlocProvider(
+      create: (context) => DeleteMessagesCubit(),
+      child: BlocConsumer<DeleteMessagesCubit, DeleteMessagesState>(
+        listener: (context, state) {
+          if (state is DeleteMessagesSuccess) {
+            customSnackBar(context, S.of(context).delete_success);
+          }
+        },
+        builder: (context, state) {
+          return ModalProgressHUD(
+            inAsyncCall: state is DeleteMessagesLoading ? true : false,
+            progressIndicator: customLoadingAnimationIndicator(),
+            child: Scaffold(
+              appBar: chatViewAppBar(context,),
+              body: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: CahtViewBody()),
+            ),
+          );
+        },
+      ),
     );
   }
 }

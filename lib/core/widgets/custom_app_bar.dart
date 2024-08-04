@@ -10,7 +10,10 @@ import '../models/svg_picture_model.dart';
 import 'custom_svg_picture.dart';
 
 AppBar customAppBar(
-    {required BuildContext context, String? title, List<Widget>? actions}) {
+    {required BuildContext context,
+    String? title,
+    List<Widget>? actions,
+    Function()? onTap}) {
   return AppBar(
       centerTitle: true,
       title: Text(title ?? S.of(context).profile, style: Styles.regular15),
@@ -23,7 +26,7 @@ AppBar customAppBar(
             svg: SvgPictureModel(
                 image: Assets.imagesArrowIosLeft,
                 height: 30,
-                onTap: () => AppRouter.pop(context))),
+                onTap: onTap ?? () => AppRouter.pop(context))),
       )),
       actions: actions);
 }

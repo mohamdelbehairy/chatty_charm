@@ -5,7 +5,6 @@ import '../../../../core/manager/copy_text/copy_text_cubit.dart';
 import '../../../../core/manager/get_user_data/get_user_data_cubit.dart';
 import '../../../../core/manager/is_arabic/is_arabic_cubit.dart';
 import '../../../../core/manager/select_language/select_language_cubit.dart';
-import '../../../chat/data/manager/delete_messages/delete_messages_cubit.dart';
 import '../../../chat/data/manager/get_messages/get_messages_cubit.dart';
 import '../../../home/data/manager/chat/chat_cubit.dart';
 import '../widgets/custom_material_app.dart';
@@ -22,7 +21,7 @@ class ChattyCharm extends StatelessWidget {
         BlocProvider(create: (context) => SelectLanguageCubit()),
         BlocProvider(create: (context) => GetUserDataCubit()),
         BlocProvider(create: (context) => CopyTextCubit()),
-        BlocProvider(create: (context) => DeleteMessagesCubit()),
+        
         BlocProvider(create: (context) => GetMessagesCubit()..getMessages()),
         BlocProvider(create: (context) => ChatCubit()),
       ],
