@@ -61,9 +61,9 @@ class _HomeViewListViewState extends State<HomeViewListView> {
                         if (index ==
                             context.read<ChatCubit>().messages.length - 1)
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                            child: customLoadingAnimationIndicator(),
-                          )
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8),
+                              child: customLoadingAnimationIndicator())
                       ],
                     )
                   : Padding(

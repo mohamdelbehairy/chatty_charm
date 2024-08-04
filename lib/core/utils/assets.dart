@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAppIcon
+  /// assets/images/app_icon.png
+  static const String imagesAppIcon = "assets/images/app_icon.png";
+
   /// Assets for imagesArrowIosLeft
   /// assets/images/arrow-ios-left.svg
   static const String imagesArrowIosLeft = "assets/images/arrow-ios-left.svg";
@@ -61,13 +65,13 @@ class Assets {
   /// assets/images/person.svg
   static const String imagesPerson = "assets/images/person.svg";
 
-  /// Assets for imagesProfile
-  /// assets/images/profile.png
-  static const String imagesProfile = "assets/images/profile.png";
-
   /// Assets for imagesSendMessage
   /// assets/images/send_message.svg
   static const String imagesSendMessage = "assets/images/send_message.svg";
+
+  /// Assets for imagesSplashScreen
+  /// assets/images/splash_screen.png
+  static const String imagesSplashScreen = "assets/images/splash_screen.png";
 
   /// Assets for imagesUser
   /// assets/images/user.svg

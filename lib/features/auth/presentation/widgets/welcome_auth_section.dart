@@ -13,7 +13,8 @@ class WelcomeAuthSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesLogo)),
+        CustomSvgPicture(
+            svg: SvgPictureModel(image: Assets.imagesLogo, height: 70)),
         const SizedBox(height: 32),
         CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesWelcome)),
         const SizedBox(height: 32),

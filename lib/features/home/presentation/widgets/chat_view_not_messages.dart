@@ -15,7 +15,8 @@ class HomeViewNotMessages extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(height: 50),
-          CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesLogo)),
+          CustomSvgPicture(
+              svg: SvgPictureModel(image: Assets.imagesLogo, height: 70)),
           const SizedBox(height: 12),
           Text('${S.of(context).Chatty} ${S.of(context).Charm}',
               style: Styles.regular34),
