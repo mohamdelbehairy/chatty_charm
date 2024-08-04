@@ -9,12 +9,23 @@ class ProfileViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        ProfileInfoSection(),
-        ProfileSettingListView(),
-        Spacer(),
-        ProfileDeveloperSetion(),
+    return const CustomScrollView(
+      physics: BouncingScrollPhysics(),
+      slivers: [
+        SliverToBoxAdapter(
+          // hasScrollBody: false,
+          child: Column(
+            children: [
+              ProfileInfoSection(),
+              ProfileSettingListView(),
+              // Spacer(),
+            ],
+          ),
+        ),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: ProfileDeveloperSetion(),
+        )
       ],
     );
   }

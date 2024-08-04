@@ -4,7 +4,6 @@ import 'package:chatty_charm/features/profile/data/models/delete_account_or_sign
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../core/widgets/custom_bottom_sheet.dart';
 import 'delete_account_or_signout_bottom_sheet.dart';
@@ -12,11 +11,11 @@ import 'language_bottom_sheet.dart';
 
 onTap(BuildContext context, int index) {
   if (index == 0) {
-    GoRouter.of(context).push(AppRouter.editUserDataView);
+    AppRouter.push(context, AppRouter.editUserDataView);
   } else if (index == 1) {
     customBottomSheet(context: context, child: const LanguageBottomSheet());
   } else if (index == 2) {
-    GoRouter.of(context).push(AppRouter.chatView);
+    AppRouter.push(context, AppRouter.chatView);
   } else if (index == 3) {
     customBottomSheet(
         context: context,

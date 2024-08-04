@@ -1,6 +1,5 @@
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../core/models/svg_picture_model.dart';
 import '../../../../core/utils/assets.dart';
@@ -24,15 +23,16 @@ class HomeTextFieldSection extends StatelessWidget {
             child: HomeViewTextField(
                 controller: controller,
                 onPressed: () async {
-                  await messages.sendMessage(controller: controller);
+                  if (controller.text.isNotEmpty) {
+                    await messages.sendMessage(controller: controller);
+                  }
                 })),
         if (messages.messages.isNotEmpty) const SizedBox(width: 8),
         if (messages.messages.isNotEmpty)
           Expanded(
               child: CustomSvgPicture(
                   svg: SvgPictureModel(
-                      onTap: () =>
-                          GoRouter.of(context).push(AppRouter.chatView),
+                      onTap: () => AppRouter.push(context, AppRouter.chatView),
                       image: Assets.imagesIconButton,
                       height: 50,
                       fit: BoxFit.scaleDown)))

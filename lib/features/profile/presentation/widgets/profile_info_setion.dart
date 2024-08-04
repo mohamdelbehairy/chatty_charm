@@ -22,7 +22,7 @@ class ProfileInfoSection extends StatelessWidget {
             const SizedBox(height: 16),
             CustomSvgPicture(
                 svg: SvgPictureModel(
-                    image: userData.gender == "male"
+                    image: userData.gender == "male" || userData.gender == "ذكر"
                         ? Assets.imagesMale
                         : Assets.imagesFemale,
                     fit: BoxFit.scaleDown)),

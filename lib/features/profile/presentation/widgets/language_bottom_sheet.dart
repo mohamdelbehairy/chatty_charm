@@ -16,10 +16,11 @@ class LanguageBottomSheet extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(S.of(context).select_language, style: Styles.semiBold20),
-        const SizedBox(height: 16),
+        const SizedBox(height: 12),
         CustomButton(
           buttonModel: ButtonModel(
-              borderRadius: 26,
+              borderRadius: 30,
+              verticalPadding: 12,
               style: Styles.medium22,
               buttonName: S.of(context).arabic,
               onPressed: () {
@@ -30,7 +31,8 @@ class LanguageBottomSheet extends StatelessWidget {
         const SizedBox(height: 8),
         CustomButton(
             buttonModel: ButtonModel(
-                borderRadius: 26,
+                borderRadius: 30,
+                verticalPadding: 12,
                 style: Styles.medium22,
                 buttonName: S.of(context).english,
                 onPressed: () {

@@ -2,7 +2,6 @@ import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../auth/presentation/widgets/welcome_auth_section.dart';
 import '../../data/manager/store_user_data/store_user_data_cubit.dart';
@@ -38,7 +37,7 @@ class _AddserDataCustomScrollState extends State<AddserDataCustomScroll> {
     return BlocConsumer<StoreUserDataCubit, StoreUserDataState>(
       listener: (context, state) {
         if (state is StoreUserDataSuccess) {
-          GoRouter.of(context).go(AppRouter.loginView);
+          AppRouter.go(context, AppRouter.loginView);
           firstName.clear();
           lastName.clear();
           username.clear();

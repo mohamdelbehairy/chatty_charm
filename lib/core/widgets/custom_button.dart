@@ -1,8 +1,9 @@
+import 'package:chatty_charm/core/helper/custom_loading_animation_indicator.dart';
 import 'package:chatty_charm/core/models/button_model.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-import 'custom_circle_indicator.dart';
+import '../utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.buttonModel});
@@ -25,7 +26,8 @@ class CustomButton extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(vertical: buttonModel.verticalPadding),
                 child: buttonModel.isLoading
-                    ? const CustomCircleIndicator()
+                    ? customLoadingAnimationIndicator(
+                        color: AppColors.whiteColor, size: 25)
                     : Text(buttonModel.buttonName,
                         style: buttonModel.style ?? Styles.medium22)),
           )),

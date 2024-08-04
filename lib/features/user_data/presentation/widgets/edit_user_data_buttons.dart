@@ -30,6 +30,7 @@ class EditUserDataButtons extends StatelessWidget {
         CustomButton(
             buttonModel: ButtonModel(
                 borderRadius: 30,
+                verticalPadding: 12,
                 buttonName: S.of(context).save,
                 onPressed: () async {
                   if (formKey.currentState!.validate()) {
@@ -55,7 +56,7 @@ class EditUserDataButtons extends StatelessWidget {
             buttonModel: ButtonModel(
                 buttonColor: Colors.transparent,
                 borderRadius: 30,
-                verticalPadding: 12,
+                verticalPadding: 10,
                 border: Border.all(color: AppColors.primaryColor),
                 style: Styles.medium22.copyWith(color: AppColors.primaryColor),
                 buttonName: S.of(context).discard,

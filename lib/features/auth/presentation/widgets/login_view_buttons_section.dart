@@ -3,7 +3,6 @@ import 'package:chatty_charm/features/auth/data/manager/login/login_cubit.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../data/models/auth_buttons_model.dart';
 import 'auth_buttons_section.dart';
@@ -34,6 +33,6 @@ class LoginViewButtonsSection extends StatelessWidget {
                     .login(email: email.text, password: password.text);
               }
             },
-            textTap: () => GoRouter.of(context).push(AppRouter.registerView)));
+            textTap: () => AppRouter.push(context, AppRouter.registerView)));
   }
 }

@@ -31,7 +31,7 @@ class HomeCustomScroll extends StatelessWidget {
           else
             const HomeViewNotMessages(),
           HomeTextFieldSection(controller: controller, messages: messages),
-          const SizedBox(height: 30),
+          const SizedBox(height: 16),
         ],
       ),
     );

@@ -51,7 +51,7 @@ class _EditUserDataCustomScrollState extends State<EditUserDataCustomScroll> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Spacer(flex: 2),
-              const WelcomeAuthSection(text: ''),
+              const WelcomeAuthSection(text: '', isAllow: false),
               UserDataListView(
                   enabled: true,
                   firstName: firstName,

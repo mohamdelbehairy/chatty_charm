@@ -6,16 +6,19 @@ import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeAuthSection extends StatelessWidget {
-  const WelcomeAuthSection({super.key, required this.text});
+  const WelcomeAuthSection(
+      {super.key, required this.text, this.isAllow = true});
   final String text;
+  final bool isAllow;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomSvgPicture(
-            svg: SvgPictureModel(image: Assets.imagesLogo, height: 70)),
-        const SizedBox(height: 32),
+        if (isAllow)
+          CustomSvgPicture(
+              svg: SvgPictureModel(image: Assets.imagesLogo, height: 70)),
+        if (isAllow) const SizedBox(height: 32),
         CustomSvgPicture(svg: SvgPictureModel(image: Assets.imagesWelcome)),
         const SizedBox(height: 32),
         Text(

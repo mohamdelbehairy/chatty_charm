@@ -3,7 +3,6 @@ import 'package:chatty_charm/features/auth/data/manager/login/login_cubit.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../core/utils/app_router.dart';
 import 'auth_fields_section.dart';
@@ -34,7 +33,8 @@ class _LoginViewCustomScrollState extends State<LoginViewCustomScroll> {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginSuccess) {
-          GoRouter.of(context).go(AppRouter.homeView);
+          AppRouter.go(context, AppRouter.homeView);
+
           email.clear();
           password.clear();
         }

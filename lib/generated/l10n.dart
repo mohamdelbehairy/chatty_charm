@@ -420,20 +420,20 @@ class S {
     );
   }
 
-  /// `Male`
+  /// `male`
   String get male {
     return Intl.message(
-      'Male',
+      'male',
       name: 'male',
       desc: '',
       args: [],
     );
   }
 
-  /// `Female`
+  /// `female`
   String get female {
     return Intl.message(
-      'Female',
+      'female',
       name: 'female',
       desc: '',
       args: [],
@@ -590,10 +590,10 @@ class S {
     );
   }
 
-  /// `Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!`
+  /// `Are you sure you want to delete your account at chatty.charm?, everything will be deleted, this step not reverted!`
   String get delete_message {
     return Intl.message(
-      'Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!',
+      'Are you sure you want to delete your account at chatty.charm?, everything will be deleted, this step not reverted!',
       name: 'delete_message',
       desc: '',
       args: [],

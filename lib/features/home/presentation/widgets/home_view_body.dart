@@ -44,10 +44,12 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       },
       builder: (context, state) {
         return CustomScrollView(
-          physics: const NeverScrollableScrollPhysics(),
+          physics: messages.messages.isNotEmpty
+              ? const NeverScrollableScrollPhysics()
+              : const BouncingScrollPhysics(),
           slivers: [
             SliverFillRemaining(
-                hasScrollBody: true,
+                hasScrollBody: messages.messages.isNotEmpty ? true : false,
                 child: HomeCustomScroll(
                     messages: messages,
                     controller: controller,

@@ -20,14 +20,14 @@ class DeleteAccountOrLoginBottomSheet extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 8),
           Text(deleteAccountOrSignoutModel.title, style: Styles.semiBold20),
           const SizedBox(height: 8),
           Text(deleteAccountOrSignoutModel.body, style: Styles.regular15),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           CustomButton(
               buttonModel: ButtonModel(
                   buttonName: deleteAccountOrSignoutModel.buttonName,
+                  verticalPadding: 12,
                   style: Styles.medium22,
                   onPressed: deleteAccountOrSignoutModel.onTap)),
           const SizedBox(height: 4),
@@ -35,6 +35,7 @@ class DeleteAccountOrLoginBottomSheet extends StatelessWidget {
               buttonModel: ButtonModel(
                   buttonColor: AppColors.backgroundColor,
                   buttonName: S.of(context).no,
+                  verticalPadding: 4,
                   style:
                       Styles.medium22.copyWith(color: AppColors.primaryColor),
                   onPressed: () => GoRouter.of(context).pop())),

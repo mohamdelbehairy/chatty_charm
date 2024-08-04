@@ -3,7 +3,6 @@ import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/features/auth/data/manager/register/register_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../generated/l10n.dart';
 import 'auth_fields_section.dart';
@@ -35,7 +34,7 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
     return BlocConsumer<RegisterCubit, RegisterState>(
       listener: (context, state) {
         if (state is RegisterSuccess) {
-          GoRouter.of(context).go(AppRouter.addUserDataView);
+          AppRouter.go(context, AppRouter.addUserDataView);
           email.clear();
           password.clear();
         }

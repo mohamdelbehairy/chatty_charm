@@ -52,7 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "delete_account_":
             MessageLookupByLibrary.simpleMessage("Delete Account?"),
         "delete_message": MessageLookupByLibrary.simpleMessage(
-            "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!"),
+            "Are you sure you want to delete your account at chatty.charm?, everything will be deleted, this step not reverted!"),
         "delete_messages":
             MessageLookupByLibrary.simpleMessage("Delete Messages?"),
         "delete_messages_body": MessageLookupByLibrary.simpleMessage(
@@ -73,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "expamle":
             MessageLookupByLibrary.simpleMessage("Example: Some text example"),
-        "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "female": MessageLookupByLibrary.simpleMessage("female"),
         "first_name": MessageLookupByLibrary.simpleMessage("first name"),
         "first_name_empty":
             MessageLookupByLibrary.simpleMessage("first name is required"),
@@ -99,7 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure that you want to logout?"),
         "made_with":
             MessageLookupByLibrary.simpleMessage("made with ❤️ in 🇪🇬"),
-        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "male": MessageLookupByLibrary.simpleMessage("male"),
         "must_be_less_10_characters": MessageLookupByLibrary.simpleMessage(
             "must be less than 10 characters"),
         "no": MessageLookupByLibrary.simpleMessage("no"),

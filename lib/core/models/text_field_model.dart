@@ -7,6 +7,7 @@ class TextFieldModel {
   final Widget? suffixIcon;
   final bool enabled, obscureText;
   final TextInputType? keyboardType;
+  final FocusNode? focusNode;
 
   TextFieldModel(
       {required this.hintText,
@@ -15,5 +16,6 @@ class TextFieldModel {
       this.suffixIcon,
       this.enabled = true,
       this.obscureText = false,
-      this.keyboardType});
+      this.keyboardType,
+      this.focusNode});
 }

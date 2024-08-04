@@ -9,6 +9,7 @@ class ProfileDeveloperSetion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(S.of(context).made_with,
             textAlign: TextAlign.center,

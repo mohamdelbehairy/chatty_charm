@@ -1,10 +1,10 @@
 import 'package:chatty_charm/core/manager/is_arabic/is_arabic_cubit.dart';
+import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import '../models/svg_picture_model.dart';
 import 'custom_svg_picture.dart';
@@ -23,7 +23,7 @@ AppBar customAppBar(
             svg: SvgPictureModel(
                 image: Assets.imagesArrowIosLeft,
                 height: 30,
-                onTap: () => GoRouter.of(context).pop())),
+                onTap: () => AppRouter.pop(context))),
       )),
       actions: actions);
 }
