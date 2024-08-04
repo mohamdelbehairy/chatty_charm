@@ -1,5 +1,6 @@
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/features/auth/data/manager/signout/signout_cubit.dart';
+import 'package:chatty_charm/features/profile/data/manager/delete_account/delete_account_cubit.dart';
 import 'package:chatty_charm/features/profile/data/models/delete_account_or_signout_model.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,11 @@ onTap(BuildContext context, int index) {
                 title: S.of(context).delete_account_,
                 body: S.of(context).delete_message,
                 buttonName: S.of(context).delete,
-                onTap: () {})));
+                onTap: () async {
+                  Navigator.pop(context);
+                  await BlocProvider.of<DeleteAccountCubit>(context)
+                      .deleteAccount();
+                })));
   } else {
     customBottomSheet(
         context: context,

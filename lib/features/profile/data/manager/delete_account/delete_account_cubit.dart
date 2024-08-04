@@ -24,12 +24,13 @@ class DeleteAccountCubit extends Cubit<DeleteAccountState> {
     await FirebaseFirestore.instance.collection('user').doc(userID).delete();
   }
 
-  Future<void> deleteChats() async {
+  Future<void> deleteAccount() async {
     emit(DeleteAccountLoading());
     try {
       await _deleteMessagesService.deleteMessages();
       await deleteUser();
-    } on Exception catch (e) {
+      emit(DeleteAccountSuccess());
+    } catch (e) {
       emit(DeleteAccountFailure(errorMessage: e.toString()));
       debugPrint('error from deleteAccount method: $e');
     }
