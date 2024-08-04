@@ -8,7 +8,7 @@ import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../data/manager/copy_text/copy_text_cubit.dart';
+import '../../../../core/manager/copy_text/copy_text_cubit.dart';
 
 class CopyItem extends StatelessWidget {
   const CopyItem({super.key, required this.text});

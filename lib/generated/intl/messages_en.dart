@@ -53,6 +53,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Delete Account?"),
         "delete_message": MessageLookupByLibrary.simpleMessage(
             "Are you sure you want to delete your account at\nchatty.charm?, everything will be deleted, this step not reverted!"),
+        "delete_messages":
+            MessageLookupByLibrary.simpleMessage("Delete Messages?"),
+        "delete_messages_body": MessageLookupByLibrary.simpleMessage(
+            "Are you sure you want to delete all your messages?"),
+        "delete_success":
+            MessageLookupByLibrary.simpleMessage("deleted successfully"),
         "developer_name":
             MessageLookupByLibrary.simpleMessage("Mohamed El-Behairy"),
         "discard": MessageLookupByLibrary.simpleMessage("Discard"),
@@ -97,6 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "must_be_less_10_characters": MessageLookupByLibrary.simpleMessage(
             "must be less than 10 characters"),
         "no": MessageLookupByLibrary.simpleMessage("no"),
+        "no_messages_1": MessageLookupByLibrary.simpleMessage(
+            "There are currently no messages to display. Start"),
+        "no_messages_2": MessageLookupByLibrary.simpleMessage(
+            "a conversation to see your messages here!"),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),

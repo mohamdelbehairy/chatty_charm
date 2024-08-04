@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ChatViewTextField extends StatelessWidget {
-  const ChatViewTextField(
+class HomeViewTextField extends StatelessWidget {
+  const HomeViewTextField(
       {super.key, required this.controller, required this.onPressed});
   final TextEditingController controller;
   final Function() onPressed;

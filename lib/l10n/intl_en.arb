@@ -59,5 +59,10 @@
     "update_details_2": "enter the new details below.",
     "save": "Save",
     "discard": "Discard",
-    "data_updated": "data updated successfully"
+    "data_updated": "data updated successfully",
+    "delete_messages": "Delete Messages?",
+    "delete_messages_body": "Are you sure you want to delete all your messages?",
+    "delete_success": "deleted successfully",
+    "no_messages_1": "There are currently no messages to display. Start",
+    "no_messages_2": "a conversation to see your messages here!"
 }

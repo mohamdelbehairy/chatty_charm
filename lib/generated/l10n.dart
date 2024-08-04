@@ -659,6 +659,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete Messages?`
+  String get delete_messages {
+    return Intl.message(
+      'Delete Messages?',
+      name: 'delete_messages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete all your messages?`
+  String get delete_messages_body {
+    return Intl.message(
+      'Are you sure you want to delete all your messages?',
+      name: 'delete_messages_body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `deleted successfully`
+  String get delete_success {
+    return Intl.message(
+      'deleted successfully',
+      name: 'delete_success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are currently no messages to display. Start`
+  String get no_messages_1 {
+    return Intl.message(
+      'There are currently no messages to display. Start',
+      name: 'no_messages_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `a conversation to see your messages here!`
+  String get no_messages_2 {
+    return Intl.message(
+      'a conversation to see your messages here!',
+      name: 'no_messages_2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

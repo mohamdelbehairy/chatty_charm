@@ -7,7 +7,7 @@ import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-AppBar chatViewAppBar(BuildContext context) {
+AppBar homeViewAppBar(BuildContext context) {
   return AppBar(
     leading: Center(
         child: CustomSvgPicture(

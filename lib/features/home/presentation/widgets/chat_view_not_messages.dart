@@ -5,8 +5,8 @@ import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-class ChatViewNotMessages extends StatelessWidget {
-  const ChatViewNotMessages({super.key});
+class HomeViewNotMessages extends StatelessWidget {
+  const HomeViewNotMessages({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'chat_view_list_view.dart';
-import 'chat_view_not_messages.dart';
-import 'chat_view_text_field.dart';
+import 'home_custom_scroll.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -23,6 +21,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
     context.read<GetUserDataCubit>().getUserData();
+
     super.initState();
   }
 
@@ -48,29 +47,11 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           physics: const NeverScrollableScrollPhysics(),
           slivers: [
             SliverFillRemaining(
-              hasScrollBody: true,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 8),
-                    if (messages.messages.isNotEmpty)
-                      ChatViewListView(
-                          messages: messages,
-                          controller: controller,
-                          scrollController: scrollController)
-                    else
-                      const ChatViewNotMessages(),
-                    ChatViewTextField(
-                        controller: controller,
-                        onPressed: () async {
-                          await messages.sendMessage(controller: controller);
-                        }),
-                    const SizedBox(height: 30),
-                  ],
-                ),
-              ),
-            )
+                hasScrollBody: true,
+                child: HomeCustomScroll(
+                    messages: messages,
+                    controller: controller,
+                    scrollController: scrollController))
           ],
         );
       },

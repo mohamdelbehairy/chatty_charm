@@ -50,6 +50,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "delete_account_": MessageLookupByLibrary.simpleMessage("حذف الحساب؟"),
         "delete_message": MessageLookupByLibrary.simpleMessage(
             "هل أنت متأكد من أنك تريد حذف حسابك؟ سيتم حذف جميع البيانات التي لديك. هذا الخطوة لا يمكن التراجع عنها."),
+        "delete_messages":
+            MessageLookupByLibrary.simpleMessage("حذف الرسائل؟"),
+        "delete_messages_body": MessageLookupByLibrary.simpleMessage(
+            "هل أنت متأكد من أنك تريد حذف جميع رسائلك؟"),
+        "delete_success":
+            MessageLookupByLibrary.simpleMessage("تم الحذف بنجاح"),
         "developer_name": MessageLookupByLibrary.simpleMessage("محمد البحيري"),
         "discard": MessageLookupByLibrary.simpleMessage("تجاهل"),
         "edit_profile":
@@ -91,6 +97,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "must_be_less_10_characters":
             MessageLookupByLibrary.simpleMessage("يجب ان يكون اقل من 10 حروف"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "no_messages_1": MessageLookupByLibrary.simpleMessage(
+            "لا توجد رسائل حالياً لعرضها. ابدأ محادثة لعرض رسائلك هنا!"),
+        "no_messages_2": MessageLookupByLibrary.simpleMessage(""),
         "not_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),

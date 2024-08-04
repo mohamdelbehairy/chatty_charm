@@ -16,6 +16,7 @@ onTap(BuildContext context, int index) {
   } else if (index == 1) {
     customBottomSheet(context: context, child: const LanguageBottomSheet());
   } else if (index == 2) {
+    GoRouter.of(context).push(AppRouter.chatView);
   } else if (index == 3) {
     customBottomSheet(
         context: context,

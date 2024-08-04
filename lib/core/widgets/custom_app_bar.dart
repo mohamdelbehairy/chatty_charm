@@ -9,7 +9,8 @@ import 'package:go_router/go_router.dart';
 import '../models/svg_picture_model.dart';
 import 'custom_svg_picture.dart';
 
-AppBar customAppBar({required BuildContext context, String? title}) {
+AppBar customAppBar(
+    {required BuildContext context, String? title, List<Widget>? actions}) {
   return AppBar(
       centerTitle: true,
       title: Text(title ?? S.of(context).profile, style: Styles.regular15),
@@ -23,5 +24,6 @@ AppBar customAppBar({required BuildContext context, String? title}) {
                 image: Assets.imagesArrowIosLeft,
                 height: 30,
                 onTap: () => GoRouter.of(context).pop())),
-      )));
+      )),
+      actions: actions);
 }
