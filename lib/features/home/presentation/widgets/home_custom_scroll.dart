@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../data/manager/chat/chat_cubit.dart';
 import 'chat_view_not_messages.dart';
+import 'home_text_field_section.dart';
 import 'home_view_list_view.dart';
-import 'home_view_text_field.dart';
 
 class HomeCustomScroll extends StatelessWidget {
   const HomeCustomScroll(
@@ -30,11 +30,7 @@ class HomeCustomScroll extends StatelessWidget {
                 scrollController: scrollController)
           else
             const HomeViewNotMessages(),
-          HomeViewTextField(
-              controller: controller,
-              onPressed: () async {
-                await messages.sendMessage(controller: controller);
-              }),
+          HomeTextFieldSection(controller: controller, messages: messages),
           const SizedBox(height: 30),
         ],
       ),

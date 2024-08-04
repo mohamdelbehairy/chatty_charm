@@ -18,9 +18,6 @@ class BotCardItem extends StatelessWidget {
           decoration: BoxDecoration(
               color: AppColors.whiteColor, borderRadius: borderRadiusMethod()),
           child: Column(
-            // crossAxisAlignment: getTextAlign(text)
-            //     ? CrossAxisAlignment.end
-            //     : CrossAxisAlignment.start,
             children: [
               CardText(text: text),
               const SizedBox(height: 12),
