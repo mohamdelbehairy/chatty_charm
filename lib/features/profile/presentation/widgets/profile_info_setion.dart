@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/manager/get_user_data/get_user_data_cubit.dart';
+import 'package:chatty_charm/features/profile/data/manager/get_user_data/get_user_data_cubit.dart';
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/utils/styles.dart';

@@ -97,6 +97,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "must_be_less_10_characters":
             MessageLookupByLibrary.simpleMessage("يجب ان يكون اقل من 10 حروف"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "no_internet":
+            MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالانترنت"),
         "no_messages_1": MessageLookupByLibrary.simpleMessage(
             "لا توجد رسائل حالياً لعرضها. ابدأ محادثة لعرض رسائلك هنا!"),
         "no_messages_2": MessageLookupByLibrary.simpleMessage(""),

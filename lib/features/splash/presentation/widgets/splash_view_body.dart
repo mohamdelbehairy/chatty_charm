@@ -1,12 +1,10 @@
 import 'package:chatty_charm/core/manager/is_arabic/is_arabic_cubit.dart';
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
-import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/assets.dart';
 import 'package:chatty_charm/core/widgets/custom_svg_picture.dart';
 import 'package:chatty_charm/features/splash/presentation/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -74,9 +72,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     final userID = prefs.getString('userID');
     Future.delayed(const Duration(seconds: 5), () async {
       if (userID != null) {
-        GoRouter.of(context).go(AppRouter.homeView);
+        // GoRouter.of(context).go(AppRouter.homeView);
       } else {
-        GoRouter.of(context).go(AppRouter.loginView);
+        // GoRouter.of(context).go(AppRouter.loginView);
       }
     });
   }

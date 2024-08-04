@@ -1,11 +1,11 @@
 import 'package:chatty_charm/core/models/button_model.dart';
+import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/colors.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:chatty_charm/core/widgets/custom_button.dart';
 import 'package:chatty_charm/features/profile/data/models/delete_account_or_signout_model.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class DeleteAccountOrLoginBottomSheet extends StatelessWidget {
   const DeleteAccountOrLoginBottomSheet(
@@ -38,7 +38,7 @@ class DeleteAccountOrLoginBottomSheet extends StatelessWidget {
                   verticalPadding: 4,
                   style:
                       Styles.medium22.copyWith(color: AppColors.primaryColor),
-                  onPressed: () => GoRouter.of(context).pop())),
+                  onPressed: () => AppRouter.pop(context))),
         ],
       ),
     );

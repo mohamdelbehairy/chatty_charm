@@ -31,12 +31,9 @@ class _LoginViewCustomScrollState extends State<LoginViewCustomScroll> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginState>(
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state is LoginSuccess) {
           AppRouter.go(context, AppRouter.homeView);
-
-          email.clear();
-          password.clear();
         }
         if (state is LoginFailure &&
             state.erroMessage == 'invalid-credential') {

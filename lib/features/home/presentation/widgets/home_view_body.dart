@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/manager/get_user_data/get_user_data_cubit.dart';
+import 'package:chatty_charm/features/profile/data/manager/get_user_data/get_user_data_cubit.dart';
 import 'package:chatty_charm/features/home/data/manager/chat/chat_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +17,26 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   TextEditingController controller = TextEditingController();
   final scrollController = ScrollController();
+  // QuickActions quickActions = const QuickActions();
 
   @override
   void initState() {
     context.read<GetUserDataCubit>().getUserData();
-
+    // initQuickActions();
     super.initState();
   }
+
+  // initQuickActions() {
+  //   quickActions.initialize((shortcutType) {
+  //     if (shortcutType == 'action_main') {
+  //       log('The user tapped on the "Main view" action.');
+  //     }
+  //   });
+  //   quickActions.setShortcutItems(<ShortcutItem>[
+  //     const ShortcutItem(
+  //         type: 'action_main', localizedTitle: 'Main view', icon: ''),
+  //   ]);
+  // }
 
   @override
   void dispose() {

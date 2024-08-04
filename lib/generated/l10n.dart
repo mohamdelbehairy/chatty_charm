@@ -709,6 +709,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No internet connection`
+  String get no_internet {
+    return Intl.message(
+      'No internet connection',
+      name: 'no_internet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

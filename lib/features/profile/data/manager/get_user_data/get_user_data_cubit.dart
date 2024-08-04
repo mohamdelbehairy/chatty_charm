@@ -11,7 +11,6 @@ class GetUserDataCubit extends Cubit<GetUserDataState> {
   List<UserModel> user = [];
 
   void getUserData() async {
-    
     try {
       FirebaseFirestore.instance
           .collection('user')

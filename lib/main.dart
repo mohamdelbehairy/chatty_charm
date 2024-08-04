@@ -1,5 +1,5 @@
 import 'package:chatty_charm/core/helper/bloc_observer.dart';
-import 'package:chatty_charm/core/utils/svg_utils.dart';
+import 'package:chatty_charm/core/utils/cached_svg.dart';
 import 'package:chatty_charm/features/auth/presentation/views/login_view.dart';
 import 'package:chatty_charm/features/home/presentation/views/home_view.dart';
 

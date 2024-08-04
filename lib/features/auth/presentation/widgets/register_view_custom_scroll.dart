@@ -35,8 +35,6 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
       listener: (context, state) {
         if (state is RegisterSuccess) {
           AppRouter.go(context, AppRouter.addUserDataView);
-          email.clear();
-          password.clear();
         }
         if (state is RegisterFailure &&
             state.errorMessage == 'email-already-in-use') {

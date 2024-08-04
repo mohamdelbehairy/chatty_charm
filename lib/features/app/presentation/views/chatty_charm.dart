@@ -1,8 +1,9 @@
+import 'package:chatty_charm/core/manager/network/network_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/manager/copy_text/copy_text_cubit.dart';
-import '../../../../core/manager/get_user_data/get_user_data_cubit.dart';
+import '../../../profile/data/manager/get_user_data/get_user_data_cubit.dart';
 import '../../../../core/manager/is_arabic/is_arabic_cubit.dart';
 import '../../../../core/manager/select_language/select_language_cubit.dart';
 import '../../../chat/data/manager/get_messages/get_messages_cubit.dart';
@@ -21,9 +22,9 @@ class ChattyCharm extends StatelessWidget {
         BlocProvider(create: (context) => SelectLanguageCubit()),
         BlocProvider(create: (context) => GetUserDataCubit()),
         BlocProvider(create: (context) => CopyTextCubit()),
-        
         BlocProvider(create: (context) => GetMessagesCubit()..getMessages()),
         BlocProvider(create: (context) => ChatCubit()),
+        BlocProvider(create: (context) => NetworkCubit())
       ],
       child: BlocBuilder<SelectLanguageCubit, SelectLanguageState>(
         builder: (context, state) {

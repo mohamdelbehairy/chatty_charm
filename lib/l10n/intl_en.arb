@@ -64,5 +64,6 @@
     "delete_messages_body": "Are you sure you want to delete all your messages?",
     "delete_success": "deleted successfully",
     "no_messages_1": "There are currently no messages to display. Start",
-    "no_messages_2": "a conversation to see your messages here!"
+    "no_messages_2": "a conversation to see your messages here!",
+    "no_internet": "No internet connection"
 }

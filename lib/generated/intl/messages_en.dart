@@ -103,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "must_be_less_10_characters": MessageLookupByLibrary.simpleMessage(
             "must be less than 10 characters"),
         "no": MessageLookupByLibrary.simpleMessage("no"),
+        "no_internet":
+            MessageLookupByLibrary.simpleMessage("No internet connection"),
         "no_messages_1": MessageLookupByLibrary.simpleMessage(
             "There are currently no messages to display. Start"),
         "no_messages_2": MessageLookupByLibrary.simpleMessage(
