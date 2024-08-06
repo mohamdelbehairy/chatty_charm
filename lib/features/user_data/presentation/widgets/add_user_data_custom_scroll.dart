@@ -52,6 +52,7 @@ class _AddserDataCustomScrollState extends State<AddserDataCustomScroll> {
             children: [
               const Spacer(flex: 2),
               WelcomeAuthSection(
+                isAllow: false,
                   text:
                       '${S.of(context).add_user_data_view_1}\n${S.of(context).add_user_data_view_2}'),
               UserDataListView(
