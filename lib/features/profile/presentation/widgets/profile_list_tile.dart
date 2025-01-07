@@ -15,11 +15,12 @@ class ProfileListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isArabic = context.read<IsArabicCubit>().isArabic();
     return ListTile(
         leading: Transform.rotate(
-            angle: (context.read<IsArabicCubit>().isArabic() &&
+            angle: (isArabic &&
                         profileListTileModel.index == 4) ||
-                    (!context.read<IsArabicCubit>().isArabic() &&
+                    (!isArabic &&
                         profileListTileModel.index == 3)
                 ? 180 * 3.14 / 180
                 : 0,
@@ -32,7 +33,7 @@ class ProfileListTile extends StatelessWidget {
         title: Text(profileListTileModel.title,
             style: Styles.regular17.copyWith(color: const Color(0xff403E39))),
         trailing: Transform.rotate(
-            angle: context.read<IsArabicCubit>().isArabic()
+            angle: isArabic
                 ? 360 * 3.14 / 180
                 : -180 * 3.14 / 180,
             child: CustomSvgPicture(

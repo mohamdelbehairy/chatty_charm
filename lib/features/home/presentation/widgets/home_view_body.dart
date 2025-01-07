@@ -17,26 +17,13 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   TextEditingController controller = TextEditingController();
   final scrollController = ScrollController();
-  // QuickActions quickActions = const QuickActions();
 
   @override
   void initState() {
     context.read<GetUserDataCubit>().getUserData();
-    // initQuickActions();
     super.initState();
   }
 
-  // initQuickActions() {
-  //   quickActions.initialize((shortcutType) {
-  //     if (shortcutType == 'action_main') {
-  //       log('The user tapped on the "Main view" action.');
-  //     }
-  //   });
-  //   quickActions.setShortcutItems(<ShortcutItem>[
-  //     const ShortcutItem(
-  //         type: 'action_main', localizedTitle: 'Main view', icon: ''),
-  //   ]);
-  // }
 
   @override
   void dispose() {

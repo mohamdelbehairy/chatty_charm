@@ -21,7 +21,7 @@ class LanguageBottomSheet extends StatelessWidget {
           buttonModel: ButtonModel(
               borderRadius: 30,
               verticalPadding: 12,
-              style: Styles.medium22,
+              style: Styles.medium20,
               buttonName: S.of(context).arabic,
               onPressed: () {
                 Navigator.pop(context);
@@ -33,7 +33,7 @@ class LanguageBottomSheet extends StatelessWidget {
             buttonModel: ButtonModel(
                 borderRadius: 30,
                 verticalPadding: 12,
-                style: Styles.medium22,
+                style: Styles.medium20,
                 buttonName: S.of(context).english,
                 onPressed: () {
                   Navigator.pop(context);

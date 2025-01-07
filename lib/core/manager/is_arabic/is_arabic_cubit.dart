@@ -8,7 +8,9 @@ class IsArabicCubit extends Cubit<IsArabicState> {
 
   bool isArabic() {
     bool isArabic = Intl.getCurrentLocale() == "ar";
-    emit(IsArabicSuccess());
+    if (isArabic) {
+      emit(IsArabicSuccess());
+    }
     return isArabic;
   }
 }

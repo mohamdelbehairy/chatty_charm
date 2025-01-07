@@ -43,6 +43,12 @@ class Styles {
       color: const Color(0xffFFFBF2),
       fontWeight: FontWeight.w500,
       fontFamily: 'Rubik');
+
+  static TextStyle medium20 = TextStyle(
+      fontSize: getResponsiveFontSize(20),
+      color: const Color(0xffFFFBF2),
+      fontWeight: FontWeight.w500,
+      fontFamily: 'Rubik');
 }
 
 double getResponsiveFontSize(double fontSize) {

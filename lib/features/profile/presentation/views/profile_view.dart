@@ -29,7 +29,7 @@ class ProfileView extends StatelessWidget {
         builder: (context, signState) {
           return BlocConsumer<DeleteAccountCubit, DeleteAccountState>(
             listener: (context, deleteState) async {
-              var deleteAccount = BlocProvider.of<DeleteAccountCubit>(context);
+              final deleteAccount = BlocProvider.of<DeleteAccountCubit>(context);
               if (deleteState is DeleteAccountSuccess) {
                 AppRouter.go(context, AppRouter.loginView);
                 await Future.delayed(const Duration(seconds: 1));
