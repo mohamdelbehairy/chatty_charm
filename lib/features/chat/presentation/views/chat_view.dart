@@ -3,7 +3,6 @@ import 'package:chatty_charm/features/chat/data/manager/delete_messages/delete_m
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../../core/utils/custom_loading_animation_indicator.dart';
 import '../widgets/caht_view_body.dart';
@@ -23,15 +22,13 @@ class ChatView extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          return ModalProgressHUD(
-            inAsyncCall: state is DeleteMessagesLoading ? true : false,
-            progressIndicator: customLoadingAnimationIndicator(),
-            child: Scaffold(
-              appBar: chatViewAppBar(context,),
-              body: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: CahtViewBody()),
-            ),
+          return Scaffold(
+            appBar: chatViewAppBar(context),
+            body: state is DeleteMessagesLoading
+                ? Center(child: customLoadingAnimationIndicator())
+                : const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: CahtViewBody()),
           );
         },
       ),

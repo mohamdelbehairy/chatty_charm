@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'copy_item.dart';
-import 'like_and_dislike_item.dart';
 
 class ItemBottomSection extends StatelessWidget {
   const ItemBottomSection({super.key, required this.text});
@@ -12,7 +11,8 @@ class ItemBottomSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const LikeAndDislikeItem(),
+        // const LikeAndDislikeItem(),
+        const Spacer(),
         CopyItem(text: text),
       ],
     );
