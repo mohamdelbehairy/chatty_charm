@@ -1,4 +1,5 @@
 import 'package:chatty_charm/core/utils/app_router.dart';
+import 'package:chatty_charm/core/utils/send_email.dart';
 import 'package:chatty_charm/features/auth/data/manager/signout/signout_cubit.dart';
 import 'package:chatty_charm/features/profile/data/manager/delete_account/delete_account_cubit.dart';
 import 'package:chatty_charm/features/profile/data/models/delete_account_or_signout_model.dart';
@@ -19,6 +20,8 @@ onTap(BuildContext context, int index) {
     AppRouter.push(context, AppRouter.chatView);
   } else if (index == 3) {
   } else if (index == 4) {
+    sendEmail();
+  } else if (index == 5) {
     customBottomSheet(
         context: context,
         child: DeleteAccountOrLoginBottomSheet(
