@@ -1,14 +1,9 @@
 import 'package:chatty_charm/core/utils/app_router.dart';
-import 'package:chatty_charm/core/utils/send_email.dart';
-import 'package:chatty_charm/features/auth/data/manager/signout/signout_cubit.dart';
-import 'package:chatty_charm/features/profile/data/manager/delete_account/delete_account_cubit.dart';
-import 'package:chatty_charm/features/profile/data/models/delete_account_or_signout_model.dart';
-import 'package:chatty_charm/generated/l10n.dart';
+import 'package:chatty_charm/core/utils/launch_url_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/utils/delete_and_logout_account.dart';
 import '../../../../core/widgets/custom_bottom_sheet.dart';
-import 'delete_account_or_signout_bottom_sheet.dart';
 import 'language_bottom_sheet.dart';
 
 onTap(BuildContext context, int index) {
@@ -19,32 +14,12 @@ onTap(BuildContext context, int index) {
   } else if (index == 2) {
     AppRouter.push(context, AppRouter.chatView);
   } else if (index == 3) {
+    LaunchUrlService.launchURL();
   } else if (index == 4) {
-    sendEmail();
+    LaunchUrlService.sendEmail();
   } else if (index == 5) {
-    customBottomSheet(
-        context: context,
-        child: DeleteAccountOrLoginBottomSheet(
-            deleteAccountOrSignoutModel: DeleteAccountOrSignoutModel(
-                title: S.of(context).delete_account_,
-                body: S.of(context).delete_message,
-                buttonName: S.of(context).delete,
-                onTap: () async {
-                  Navigator.pop(context);
-                  await BlocProvider.of<DeleteAccountCubit>(context)
-                      .deleteAccount();
-                })));
+    deleteAccount(context);
   } else {
-    customBottomSheet(
-        context: context,
-        child: DeleteAccountOrLoginBottomSheet(
-            deleteAccountOrSignoutModel: DeleteAccountOrSignoutModel(
-                title: S.of(context).logout_title,
-                body: S.of(context).logout_message,
-                buttonName: S.of(context).log_out,
-                onTap: () async {
-                  Navigator.pop(context);
-                  await BlocProvider.of<SignoutCubit>(context).signout();
-                })));
+    logout(context);
   }
 }
