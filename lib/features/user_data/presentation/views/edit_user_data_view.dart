@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/core/widgets/no_newtwork_view.dart';
 import 'package:chatty_charm/features/user_data/data/manager/update_user_data/update_user_data_cubit.dart';
 import 'package:chatty_charm/features/user_data/presentation/widgets/edit_user_data_view_body.dart';
@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-import '../../../../core/helper/custom_loading_animation_indicator.dart';
 import '../../../../core/manager/network/network_cubit.dart';
+import '../../../../core/utils/custom_loading_animation_indicator.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 
 class EditUserDataView extends StatelessWidget {
@@ -30,6 +30,7 @@ class EditUserDataView extends StatelessWidget {
             listener: (context, state) {
               if (state == ConnectivityResult.none) {
                 Future.delayed(const Duration(seconds: 5), () {
+                  // ignore: use_build_context_synchronously
                   customSnackBar(context, S.of(context).no_internet);
                 });
               }

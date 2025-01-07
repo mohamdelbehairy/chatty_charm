@@ -1,9 +1,9 @@
-import 'package:chatty_charm/core/helper/custom_loading_animation_indicator.dart';
 import 'package:chatty_charm/core/models/button_model.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
+import '../utils/custom_loading_animation_indicator.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.buttonModel});

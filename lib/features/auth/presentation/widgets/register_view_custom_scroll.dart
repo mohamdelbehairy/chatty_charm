@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/features/auth/data/manager/register/register_cubit.dart';
 import 'package:flutter/material.dart';

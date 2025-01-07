@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/features/auth/data/manager/login/login_cubit.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';

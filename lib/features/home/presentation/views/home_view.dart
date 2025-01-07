@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/core/manager/network/network_cubit.dart';
 import 'package:chatty_charm/features/home/presentation/widgets/home_view_body.dart';
 import 'package:chatty_charm/generated/l10n.dart';
@@ -18,6 +18,7 @@ class HomeView extends StatelessWidget {
       listener: (context, state) {
         if (state == ConnectivityResult.none) {
           Future.delayed(const Duration(seconds: 5), () {
+            // ignore: use_build_context_synchronously
             customSnackBar(context, S.of(context).no_internet);
           });
         }

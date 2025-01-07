@@ -1,10 +1,10 @@
-import 'package:chatty_charm/core/helper/custom_loading_animation_indicator.dart';
 import 'package:chatty_charm/features/chat/data/manager/get_messages/get_messages_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/models/svg_picture_model.dart';
 import '../../../../core/utils/assets.dart';
+import '../../../../core/utils/custom_loading_animation_indicator.dart';
 import '../../../../core/utils/styles.dart';
 import '../../../../core/widgets/custom_svg_picture.dart';
 import '../../../../generated/l10n.dart';

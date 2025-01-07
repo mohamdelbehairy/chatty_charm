@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/core/models/svg_picture_model.dart';
 import 'package:chatty_charm/core/utils/app_router.dart';
 import 'package:chatty_charm/core/utils/assets.dart';

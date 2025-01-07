@@ -1,4 +1,4 @@
-import 'package:chatty_charm/core/helper/get_text_align.dart';
+import 'package:chatty_charm/core/utils/get_text_align.dart';
 import 'package:chatty_charm/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 

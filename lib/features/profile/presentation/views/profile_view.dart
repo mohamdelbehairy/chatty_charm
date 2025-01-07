@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../core/helper/custom_loading_animation_indicator.dart';
+import '../../../../core/utils/custom_loading_animation_indicator.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import '../widgets/profile_view_body.dart';
 

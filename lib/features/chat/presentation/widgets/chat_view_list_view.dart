@@ -1,9 +1,9 @@
-import 'package:chatty_charm/core/helper/custom_snack_bar.dart';
+import 'package:chatty_charm/core/utils/custom_snack_bar.dart';
 import 'package:chatty_charm/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/helper/get_text_align.dart';
+import '../../../../core/utils/get_text_align.dart';
 import '../../../../core/manager/is_arabic/is_arabic_cubit.dart';
 import '../../../home/presentation/widgets/bot_card_item.dart';
 import '../../../home/presentation/widgets/user_card_item.dart';
