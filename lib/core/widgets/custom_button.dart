@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
       child: Container(
-          width: double.infinity,
+          width: buttonModel.width ?? double.infinity,
           decoration: BoxDecoration(
               color: buttonModel.buttonColor,
               border: buttonModel.border,

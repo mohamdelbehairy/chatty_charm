@@ -9,6 +9,7 @@ class ButtonModel {
   final double borderRadius, verticalPadding;
   final TextStyle? style;
   final BoxBorder? border;
+  final double? width;
 
   ButtonModel(
       {required this.buttonName,
@@ -18,5 +19,6 @@ class ButtonModel {
       this.borderRadius = 12,
       this.style,
       this.border,
-      this.verticalPadding = 16});
+      this.verticalPadding = 16,
+      this.width});
 }

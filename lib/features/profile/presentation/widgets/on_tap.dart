@@ -18,6 +18,7 @@ onTap(BuildContext context, int index) {
   } else if (index == 2) {
     AppRouter.push(context, AppRouter.chatView);
   } else if (index == 3) {
+  } else if (index == 4) {
     customBottomSheet(
         context: context,
         child: DeleteAccountOrLoginBottomSheet(

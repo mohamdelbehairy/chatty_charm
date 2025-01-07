@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_soon":
             MessageLookupByLibrary.simpleMessage("سيكون متاحًا قريبًا"),
         "chat": MessageLookupByLibrary.simpleMessage("المحادثات"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
         "continue_": MessageLookupByLibrary.simpleMessage("أكمل"),
         "copied_to_clipboard":
             MessageLookupByLibrary.simpleMessage("تم النسخ إلى الحافظة"),
@@ -109,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة"),
         "password_valid": MessageLookupByLibrary.simpleMessage(
             "كلمة المرور يجب ان تكون على الأقل 8 حروف"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "register": MessageLookupByLibrary.simpleMessage("سجل الآن"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),

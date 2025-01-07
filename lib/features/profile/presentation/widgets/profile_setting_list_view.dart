@@ -21,14 +21,27 @@ class ProfileSettingListView extends StatelessWidget {
           title: S.of(context).language,
           image: Assets.imagesLanguage),
       ProfileListTileModel(
-          index: 2, title: S.of(context).chat, image: Assets.imagesDocs),
+        index: 2,
+        title: S.of(context).chat,
+        image: Assets.imagesChat,
+        height: 25,
+      ),
       ProfileListTileModel(
           index: 3,
+          title: S.of(context).privacy_policy,
+          image: Assets.imagesDocs),
+      ProfileListTileModel(
+          index: 4,
+          title: S.of(context).contact_us,
+          image: Assets.imagesContactUs,
+          height: 25),
+      ProfileListTileModel(
+          index: 5,
           title: S.of(context).delete_account,
           image: Assets.imagesDelete,
           height: 25),
       ProfileListTileModel(
-          index: 4, title: S.of(context).log_out, image: Assets.imagesLogOut),
+          index: 6, title: S.of(context).log_out, image: Assets.imagesLogOut),
     ];
     return Column(
       children: List.generate(items.length, (index) {

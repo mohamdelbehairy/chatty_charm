@@ -18,10 +18,8 @@ class ProfileListTile extends StatelessWidget {
     var isArabic = context.read<IsArabicCubit>().isArabic();
     return ListTile(
         leading: Transform.rotate(
-            angle: (isArabic &&
-                        profileListTileModel.index == 4) ||
-                    (!isArabic &&
-                        profileListTileModel.index == 3)
+            angle: (isArabic && profileListTileModel.index == 6) ||
+                    (!isArabic && profileListTileModel.index == 5)
                 ? 180 * 3.14 / 180
                 : 0,
             child: CustomSvgPicture(
@@ -33,9 +31,7 @@ class ProfileListTile extends StatelessWidget {
         title: Text(profileListTileModel.title,
             style: Styles.regular17.copyWith(color: const Color(0xff403E39))),
         trailing: Transform.rotate(
-            angle: isArabic
-                ? 360 * 3.14 / 180
-                : -180 * 3.14 / 180,
+            angle: isArabic ? 360 * 3.14 / 180 : -180 * 3.14 / 180,
             child: CustomSvgPicture(
                 svg: SvgPictureModel(
                     image: Assets.imagesArrowIosLeft,

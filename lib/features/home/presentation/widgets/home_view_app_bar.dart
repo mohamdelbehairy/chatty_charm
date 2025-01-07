@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 AppBar homeViewAppBar(BuildContext context) {
   return AppBar(
+    automaticallyImplyLeading: false,
     // leading: Center(
     //     child: CustomSvgPicture(
     //         svg: SvgPictureModel(

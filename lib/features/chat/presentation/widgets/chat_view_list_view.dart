@@ -16,6 +16,7 @@ class ChatViewListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isArabic = context.read<IsArabicCubit>().isArabic();
     return ListView.builder(
         reverse: true,
         physics: const BouncingScrollPhysics(),
@@ -24,17 +25,13 @@ class ChatViewListView extends StatelessWidget {
           final message = messages.messages[index];
           return message.isUser
               ? Column(
-                  crossAxisAlignment:
-                      context.read<IsArabicCubit>().isArabic() &&
-                              getTextAlign(message.message)
+                  crossAxisAlignment: isArabic && getTextAlign(message.message)
+                      ? CrossAxisAlignment.start
+                      : !isArabic && !getTextAlign(message.message)
                           ? CrossAxisAlignment.start
-                          : !context.read<IsArabicCubit>().isArabic() &&
-                                  !getTextAlign(message.message)
-                              ? CrossAxisAlignment.start
-                              : !context.read<IsArabicCubit>().isArabic() &&
-                                      getTextAlign(message.message)
-                                  ? CrossAxisAlignment.end
-                                  : CrossAxisAlignment.end,
+                          : !isArabic && getTextAlign(message.message)
+                              ? CrossAxisAlignment.end
+                              : CrossAxisAlignment.end,
                   children: [
                     UserCardItem(
                         text: message.message,

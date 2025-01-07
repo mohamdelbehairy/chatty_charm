@@ -15,20 +15,18 @@ class HomeViewTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isArabic = context.read<IsArabicCubit>().isArabic();
     return CustomTextField(
       textFieldModel: TextFieldModel(
         controller: controller,
         hintText: S.of(context).ask_me,
         suffixIcon: Padding(
           padding: EdgeInsets.only(
-              left: context.read<IsArabicCubit>().isArabic() ? 8.0 : 0.0,
-              right: context.read<IsArabicCubit>().isArabic() ? 0.0 : 8.0),
+              left: isArabic ? 8.0 : 0.0, right: isArabic ? 0.0 : 8.0),
           child: IconButton(
               onPressed: onPressed,
               icon: Transform.rotate(
-                  angle: context.read<IsArabicCubit>().isArabic()
-                      ? 180 * 3.14 / 180
-                      : 360 * 3.14 / 180,
+                  angle: isArabic ? 180 * 3.14 / 180 : 360 * 3.14 / 180,
                   child: SvgPicture.asset(Assets.imagesSendMessage))),
         ),
       ),

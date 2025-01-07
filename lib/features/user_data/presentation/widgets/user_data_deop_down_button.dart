@@ -10,10 +10,11 @@ class UserDataDropDownButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isArabic = context.read<IsArabicCubit>().isArabic();
     return Positioned(
       top: MediaQuery.sizeOf(context).height * .005,
-      right: context.read<IsArabicCubit>().isArabic() ? null : 4.0,
-      left: context.read<IsArabicCubit>().isArabic() ? 4.0 : null,
+      right: isArabic ? null : 4.0,
+      left: isArabic ? 4.0 : null,
       child: DropdownButton(
           dropdownColor: AppColors.backgroundColor,
           borderRadius: BorderRadius.circular(12),

@@ -27,6 +27,7 @@ class HomeViewListView extends StatefulWidget {
 class _HomeViewListViewState extends State<HomeViewListView> {
   @override
   Widget build(BuildContext context) {
+    var isArabic = context.read<IsArabicCubit>().isArabic();
     return Expanded(
         child: ListView.builder(
             controller: widget.scrollController,
@@ -37,14 +38,11 @@ class _HomeViewListViewState extends State<HomeViewListView> {
               return message.isUser
                   ? Column(
                       crossAxisAlignment:
-                          context.read<IsArabicCubit>().isArabic() &&
-                                  getTextAlign(message.message)
+                          isArabic && getTextAlign(message.message)
                               ? CrossAxisAlignment.start
-                              : !context.read<IsArabicCubit>().isArabic() &&
-                                      !getTextAlign(message.message)
+                              : !isArabic && !getTextAlign(message.message)
                                   ? CrossAxisAlignment.start
-                                  : !context.read<IsArabicCubit>().isArabic() &&
-                                          getTextAlign(message.message)
+                                  : !isArabic && getTextAlign(message.message)
                                       ? CrossAxisAlignment.end
                                       : CrossAxisAlignment.end,
                       children: [

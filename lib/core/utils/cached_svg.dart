@@ -21,7 +21,9 @@ class CachedSvg {
       Assets.imagesMenu,
       Assets.imagesPerson,
       Assets.imagesUser,
-      Assets.imagesSendMessage
+      Assets.imagesSendMessage,
+      Assets.imagesChat,
+      Assets.imagesContactUs
     ];
 
     for (var element in cacheSvg) {

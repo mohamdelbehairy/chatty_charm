@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "available_soon":
             MessageLookupByLibrary.simpleMessage("It will be available soon"),
         "chat": MessageLookupByLibrary.simpleMessage("Chats"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "continue_": MessageLookupByLibrary.simpleMessage("Continue"),
         "copied_to_clipboard":
             MessageLookupByLibrary.simpleMessage("Copied to clipboard"),
@@ -116,6 +117,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("password is required"),
         "password_valid": MessageLookupByLibrary.simpleMessage(
             "password must be at least 8 characters"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "register": MessageLookupByLibrary.simpleMessage("Register now"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
