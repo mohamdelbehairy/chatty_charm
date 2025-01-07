@@ -739,6 +739,16 @@ class S {
       args: [],
     );
   }
+
+  /// `I have read & agree with`
+  String get read_and_agree_policy {
+    return Intl.message(
+      'I have read & agree with',
+      name: 'read_and_agree_policy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

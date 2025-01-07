@@ -17,10 +17,17 @@ class LoginViewCustomScroll extends StatefulWidget {
 }
 
 class _LoginViewCustomScrollState extends State<LoginViewCustomScroll> {
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
+  late TextEditingController email, password;
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  
+  @override
+  void initState() {
+    email = TextEditingController();
+    password = TextEditingController();
+    super.initState();
+  }
+
   @override
   void dispose() {
     email.dispose();

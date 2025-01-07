@@ -15,6 +15,7 @@ class AuthButtonsSection extends StatelessWidget {
       children: [
         CustomButton(
             buttonModel: ButtonModel(
+                enableFeedback: authButtonsModel.enableFeedback,
                 isLoading: authButtonsModel.isLoading,
                 buttonName: authButtonsModel.buttonName,
                 onPressed: authButtonsModel.buttonTap)),

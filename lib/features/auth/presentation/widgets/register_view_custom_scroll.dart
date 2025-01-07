@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../generated/l10n.dart';
 import 'auth_fields_section.dart';
+import 'read_and_agree_policy_widget.dart';
 import 'register_view_buttons_section.dart';
 import 'welcome_auth_section.dart';
 
@@ -18,10 +19,19 @@ class RegisterViewCustomScroll extends StatefulWidget {
 }
 
 class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
-  TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
+  late TextEditingController email, password;
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  bool isClick = false;
+
+  @override
+  void initState() {
+    email = TextEditingController();
+    password = TextEditingController();
+    super.initState();
+  }
+
   @override
   void dispose() {
     email.dispose();
@@ -55,12 +65,21 @@ class _RegisterViewCustomScrollState extends State<RegisterViewCustomScroll> {
                   email: email,
                   password: password,
                   enabled: state is RegisterLoading ? false : true),
-              const Expanded(child: SizedBox(height: 24)),
+              const Expanded(child: SizedBox(height: 20)),
+              ReadAndAgreePolicyWidget(
+                isClick: isClick,
+                onTap: () {
+                  setState(() {
+                    isClick = !isClick;
+                  });
+                },
+              ),
               RegisterViewButtonsSection(
                   isLoading: state is RegisterLoading ? true : false,
                   email: email,
                   password: password,
-                  formKey: formKey),
+                  formKey: formKey,
+                  isClick: isClick),
               const Spacer(),
             ],
           ),

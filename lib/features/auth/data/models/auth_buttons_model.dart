@@ -1,7 +1,7 @@
 class AuthButtonsModel {
   final String buttonName, buttonText, text;
   final Function() buttonTap, textTap;
-  final bool isLoading;
+  final bool isLoading, enableFeedback;
 
   AuthButtonsModel(
       {required this.buttonName,
@@ -9,5 +9,6 @@ class AuthButtonsModel {
       required this.text,
       required this.buttonTap,
       required this.textTap,
-      this.isLoading = false});
+      this.isLoading = false,
+      this.enableFeedback = true});
 }

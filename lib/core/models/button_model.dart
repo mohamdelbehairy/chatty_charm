@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ButtonModel {
   final String buttonName;
   final Function() onPressed;
-  final bool isLoading;
+  final bool isLoading, enableFeedback;
   final Color buttonColor;
   final double borderRadius, verticalPadding;
   final TextStyle? style;
@@ -20,5 +20,6 @@ class ButtonModel {
       this.style,
       this.border,
       this.verticalPadding = 16,
-      this.width});
+      this.width,
+      this.enableFeedback = true});
 }

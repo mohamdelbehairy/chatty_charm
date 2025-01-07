@@ -113,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "read_and_agree_policy":
+            MessageLookupByLibrary.simpleMessage("لقد قرأت وأوافق على"),
         "register": MessageLookupByLibrary.simpleMessage("سجل الآن"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "select_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),

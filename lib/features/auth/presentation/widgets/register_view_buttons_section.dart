@@ -13,24 +13,28 @@ class RegisterViewButtonsSection extends StatelessWidget {
       required this.email,
       required this.password,
       required this.formKey,
-      required this.isLoading});
+      required this.isLoading,
+      required this.isClick});
   final TextEditingController email, password;
   final GlobalKey<FormState> formKey;
-  final bool isLoading;
+  final bool isLoading, isClick;
 
   @override
   Widget build(BuildContext context) {
     return AuthButtonsSection(
         authButtonsModel: AuthButtonsModel(
             isLoading: isLoading,
+            enableFeedback: isClick,
             buttonName: S.of(context).create_free_account,
             buttonText: S.of(context).log_in,
             text: S.of(context).already_have_an_account,
             buttonTap: () async {
-              if (formKey.currentState!.validate()) {
-                formKey.currentState!.save();
-                await BlocProvider.of<RegisterCubit>(context)
-                    .register(email: email.text, password: password.text);
+              if (isClick) {
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                  await BlocProvider.of<RegisterCubit>(context)
+                      .register(email: email.text, password: password.text);
+                }
               }
             },
             textTap: () => AppRouter.pop(context)));

@@ -67,5 +67,6 @@
     "no_messages_2": "a conversation to see your messages here!",
     "no_internet": "No internet connection",
     "privacy_policy":"Privacy Policy",
-    "contact_us":"Contact us"
+    "contact_us":"Contact us",
+    "read_and_agree_policy":"I have read & agree with"
 }
