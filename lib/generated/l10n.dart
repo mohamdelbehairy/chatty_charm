@@ -18,17 +18,20 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name =
+        (locale.countryCode?.isEmpty ?? false)
+            ? locale.languageCode
+            : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -41,8 +44,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -92,42 +97,22 @@ class S {
 
   /// `Languages`
   String get language {
-    return Intl.message(
-      'Languages',
-      name: 'language',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Languages', name: 'language', desc: '', args: []);
   }
 
   /// `Chats`
   String get chat {
-    return Intl.message(
-      'Chats',
-      name: 'chat',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Chats', name: 'chat', desc: '', args: []);
   }
 
   /// `Log out`
   String get log_out {
-    return Intl.message(
-      'Log out',
-      name: 'log_out',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Log out', name: 'log_out', desc: '', args: []);
   }
 
   /// `Profile`
   String get profile {
-    return Intl.message(
-      'Profile',
-      name: 'profile',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
 
   /// `made with ❤️ in 🇪🇬`
@@ -152,22 +137,12 @@ class S {
 
   /// `Chatty`
   String get Chatty {
-    return Intl.message(
-      'Chatty',
-      name: 'Chatty',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Chatty', name: 'Chatty', desc: '', args: []);
   }
 
   /// `Charm`
   String get Charm {
-    return Intl.message(
-      'Charm',
-      name: 'Charm',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Charm', name: 'Charm', desc: '', args: []);
   }
 
   /// `I'm here to help you with whatever you need, from answering questions to providing recommendations. Let's chat.`
@@ -192,12 +167,7 @@ class S {
 
   /// `goes in here`
   String get goes_here {
-    return Intl.message(
-      'goes in here',
-      name: 'goes_here',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('goes in here', name: 'goes_here', desc: '', args: []);
   }
 
   /// `Select a language`
@@ -212,32 +182,17 @@ class S {
 
   /// `Arabic`
   String get arabic {
-    return Intl.message(
-      'Arabic',
-      name: 'arabic',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
   }
 
   /// `English`
   String get english {
-    return Intl.message(
-      'English',
-      name: 'english',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('English', name: 'english', desc: '', args: []);
   }
 
   /// `Welcome to`
   String get welcome {
-    return Intl.message(
-      'Welcome to',
-      name: 'welcome',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Welcome to', name: 'welcome', desc: '', args: []);
   }
 
   /// `Create a free Chatty Charm account`
@@ -262,22 +217,12 @@ class S {
 
   /// `Email address`
   String get email {
-    return Intl.message(
-      'Email address',
-      name: 'email',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Email address', name: 'email', desc: '', args: []);
   }
 
   /// `Password`
   String get password {
-    return Intl.message(
-      'Password',
-      name: 'password',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Password', name: 'password', desc: '', args: []);
   }
 
   /// `Create FREE account`
@@ -302,12 +247,7 @@ class S {
 
   /// `Log in`
   String get log_in {
-    return Intl.message(
-      'Log in',
-      name: 'log_in',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Log in', name: 'log_in', desc: '', args: []);
   }
 
   /// `Log in to your free Chatty Charm account`
@@ -332,12 +272,7 @@ class S {
 
   /// `Register now`
   String get register {
-    return Intl.message(
-      'Register now',
-      name: 'register',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Register now', name: 'register', desc: '', args: []);
   }
 
   /// `Delete account`
@@ -372,72 +307,37 @@ class S {
 
   /// `first name`
   String get first_name {
-    return Intl.message(
-      'first name',
-      name: 'first_name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('first name', name: 'first_name', desc: '', args: []);
   }
 
   /// `last name`
   String get last_name {
-    return Intl.message(
-      'last name',
-      name: 'last_name',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('last name', name: 'last_name', desc: '', args: []);
   }
 
   /// `user name`
   String get username {
-    return Intl.message(
-      'user name',
-      name: 'username',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('user name', name: 'username', desc: '', args: []);
   }
 
   /// `gender`
   String get gender {
-    return Intl.message(
-      'gender',
-      name: 'gender',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('gender', name: 'gender', desc: '', args: []);
   }
 
   /// `Continue`
   String get continue_ {
-    return Intl.message(
-      'Continue',
-      name: 'continue_',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Continue', name: 'continue_', desc: '', args: []);
   }
 
   /// `male`
   String get male {
-    return Intl.message(
-      'male',
-      name: 'male',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('male', name: 'male', desc: '', args: []);
   }
 
   /// `female`
   String get female {
-    return Intl.message(
-      'female',
-      name: 'female',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('female', name: 'female', desc: '', args: []);
   }
 
   /// `email address is required`
@@ -572,12 +472,7 @@ class S {
 
   /// `no`
   String get no {
-    return Intl.message(
-      'no',
-      name: 'no',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('no', name: 'no', desc: '', args: []);
   }
 
   /// `Delete Account?`
@@ -602,12 +497,7 @@ class S {
 
   /// `Delete`
   String get delete {
-    return Intl.message(
-      'Delete',
-      name: 'delete',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Delete', name: 'delete', desc: '', args: []);
   }
 
   /// `To update your account information, please`
@@ -632,22 +522,12 @@ class S {
 
   /// `Save`
   String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Save', name: 'save', desc: '', args: []);
   }
 
   /// `Discard`
   String get discard {
-    return Intl.message(
-      'Discard',
-      name: 'discard',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Discard', name: 'discard', desc: '', args: []);
   }
 
   /// `data updated successfully`
@@ -732,12 +612,7 @@ class S {
 
   /// `Contact us`
   String get contact_us {
-    return Intl.message(
-      'Contact us',
-      name: 'contact_us',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Contact us', name: 'contact_us', desc: '', args: []);
   }
 
   /// `I have read & agree with`

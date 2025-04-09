@@ -21,17 +21,18 @@ class ReadAndAgreePolicyWidget extends StatelessWidget {
             height: 20,
             width: 20,
             decoration: BoxDecoration(
-                color: isClick ? AppColors.primaryColor : Colors.transparent,
+                color: isClick? AppColors.primaryColor:Colors.transparent,
                 border: Border.all(color: AppColors.primaryColor),
                 borderRadius: BorderRadius.circular(4)),
             child: Transform.rotate(
-              angle: 0,
-              child: const Icon(
-                Icons.done,
-                color: AppColors.whiteColor,
-                size: 16,
-              ),
-            ),
+                angle: 0,
+                child: isClick
+                    ? const Icon(
+                        Icons.done,
+                        color: AppColors.whiteColor,
+                        size: 16,
+                      )
+                    : null),
           ),
         ),
         const SizedBox(width: 8),

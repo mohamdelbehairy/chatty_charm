@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:chatty_charm/core/models/message_model.dart';
 import 'package:chatty_charm/core/utils/api_key.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -17,7 +19,7 @@ class ChatCubit extends Cubit<ChatState> {
   Future<void> sendMessage({required TextEditingController controller}) async {
     emit(ChatLoading());
     try {
-      final model = GenerativeModel(model: "gemini-pro", apiKey: ApiKey.apiKey);
+      final model = GenerativeModel(model: "gemini-1.5-flash-latest", apiKey: ApiKey.apiKey);
       final message = controller.text;
       controller.clear();
       messages.add(MessageModel(
@@ -46,7 +48,7 @@ class ChatCubit extends Cubit<ChatState> {
               messageID: const Uuid().v4()));
     } catch (e) {
       emit(ChatFailure(errorMessage: e.toString()));
-      debugPrint('error from send message method: $e');
+      log('error from send message method: $e');
     }
   }
 
